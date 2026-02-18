@@ -1774,15 +1774,15 @@ footer {
   /* Product Grid Fixes - Stack Vertically */
   .products-grid-centered,
   .last-row-centered {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 20px !important;
   }
 
   .products-grid-centered .product-card,
   .last-row-centered .product-card {
-    width: 100%;
-    max-width: none;
+    width: 100% !important;
+    max-width: none !important;
   }
 
   .footer-grid {
