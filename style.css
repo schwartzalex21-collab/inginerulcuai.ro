@@ -394,7 +394,7 @@ img {
   font-family: var(--font-head);
   font-size: clamp(44px, 6.5vw, 80px);
   font-weight: 900;
-  line-height: 1.25;
+  line-height: 1.1;
   margin-bottom: 24px;
   animation: fadeUp 0.6s 0.1s ease both;
 }
