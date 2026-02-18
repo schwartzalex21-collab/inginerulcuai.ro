@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cum să scrii prompturi AI care funcționează — Inginerul Cu AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.article-wrap{max-width:760px;margin:0 auto;padding:60px 24px 100px}
+.article-meta{display:flex;gap:16px;align-items:center;margin-bottom:32px;flex-wrap:wrap}
+.article-cat{background:rgba(243,156,18,.12);border:1px solid rgba(243,156,18,.25);color:var(--gold);padding:5px 14px;border-radius:50px;font-size:12px;font-weight:700;letter-spacing:1px}
+.article-date{font-size:13px;color:var(--dgray)}
+.article-wrap h1{font-family:var(--font-head);font-size:clamp(28px,4vw,44px);font-weight:800;line-height:1.15;margin-bottom:20px}
+.article-lead{font-size:18px;color:var(--gray);line-height:1.8;margin-bottom:40px;padding-bottom:32px;border-bottom:1px solid var(--border-dim)}
+.article-wrap h2{font-family:var(--font-head);font-size:24px;font-weight:700;color:var(--white);margin:40px 0 14px}
+.article-wrap h3{font-family:var(--font-head);font-size:19px;font-weight:600;color:var(--gold);margin:28px 0 10px}
+.article-wrap p{font-size:16px;color:var(--gray);line-height:1.85;margin-bottom:18px}
+.article-wrap ul,.article-wrap ol{margin:12px 0 20px 24px}
+.article-wrap li{font-size:16px;color:var(--gray);line-height:1.8;margin-bottom:8px}
+.prompt-box{background:var(--card-bg);border:1px solid rgba(243,156,18,.3);border-left:4px solid var(--gold);border-radius:0 12px 12px 0;padding:20px 24px;margin:24px 0;font-family:monospace;font-size:14px;color:#e0e0e0;line-height:1.7;white-space:pre-wrap}
+.tip-box{background:rgba(46,204,113,.07);border:1px solid rgba(46,204,113,.2);border-radius:12px;padding:20px 24px;margin:24px 0}
+.tip-box strong{color:var(--emerald);display:block;margin-bottom:6px;font-size:14px;text-transform:uppercase;letter-spacing:.5px}
+.tip-box p{margin:0;font-size:15px;color:var(--gray)}
+.article-cta{background:linear-gradient(135deg,var(--midnight),var(--forest));border:1px solid rgba(243,156,18,.3);border-radius:16px;padding:36px;text-align:center;margin-top:56px}
+.article-cta h3{font-family:var(--font-head);font-size:22px;font-weight:700;margin-bottom:10px}
+.article-cta p{color:var(--gray);margin-bottom:24px}
+.back-link{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-size:14px;font-weight:600;margin-bottom:32px;transition:.2s}
+.back-link:hover{opacity:.75}
+</style>
+</head>
+<body>
+<nav id="navbar"><div class="nav-inner"><a href="index.html" class="nav-logo"><div class="logo-badge">AI</div><div class="logo-text"><span class="logo-line1">INGINERUL</span><span class="logo-line2">CU AI</span></div></a><ul class="nav-links"><li><a href="index.html">Acasă</a></li><li><a href="shop.html">Produse</a></li><li><a href="despre.html">Despre</a></li><li><a href="blog.html" class="active">Blog</a></li><li><a href="contact.html">Contact</a></li></ul><a href="shop.html" class="btn-nav">Vezi Produsele →</a><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div><div class="mobile-menu" id="mobileMenu"><a href="index.html">Acasă</a><a href="shop.html">Produse</a><a href="despre.html">Despre</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="shop.html" class="btn-mobile">Vezi Produsele →</a></div></nav>
+
+<div style="padding-top:90px">
+<div class="article-wrap">
+  <a href="blog.html" class="back-link">← Înapoi la Blog</a>
+  <div class="article-meta">
+    <span class="article-cat">Ghid pentru Începători</span>
+    <span class="article-date">15 Ianuarie 2026 · 8 min citire</span>
+  </div>
+  <h1>Cum să scrii prompturi AI care chiar funcționează</h1>
+  <p class="article-lead">Majoritatea oamenilor folosesc AI-ul greșit. Nu din lipsă de inteligență, ci din lipsă de metodă. În acest ghid îți arăt exact ce face diferența între un prompt care dă output mediocru și unul care îți rezolvă problema din prima.</p>
+
+  <h2>De ce nu funcționează prompturile tale</h2>
+  <p>Când dai unui asistent AI o instrucțiune vagă, primești un răspuns vag. Este o regulă simplă pe care puțini o înțeleg cu adevărat. Gândește-te că vorbești cu cel mai inteligent coleg al tău — dar care nu știe nimic despre contextul tău. Dacă îi spui "scrie-mi un email", va scrie ceva generic. Dacă îi spui "scrie-mi un email de follow-up către un client care nu a răspuns în 5 zile, pentru un proiect de web design în valoare de 2.000 EUR, cu ton profesional dar prietenos" — primești exact ce ai nevoie.</p>
+
+  <h2>Structura unui prompt bun</h2>
+  <p>Un prompt eficient are 4 componente. Nu trebuie să le folosești pe toate întotdeauna, dar cu cât sunt mai complete, cu atât outputul este mai precis.</p>
+
+  <h3>1. Rolul — cine este AI-ul</h3>
+  <p>Spune-i AI-ului ce expert vrei să fie. Asta îi calibrează tonul, vocabularul și nivelul de profunzime al răspunsului.</p>
+  <div class="prompt-box">❌ Slab: "Scrie-mi un text de prezentare."
+
+✅ Bun: "Ești un copywriter senior specializat în B2B. Scrie-mi un text de prezentare..."</div>
+
+  <h3>2. Contextul — situația concretă</h3>
+  <p>Oferă cât mai mult context relevant. Industria ta, publicul țintă, tonul dorit, lungimea, platforma unde va fi folosit textul.</p>
+
+  <h3>3. Sarcina clară — ce trebuie să facă exact</h3>
+  <p>Fii specific. Nu "scrie ceva despre produsul meu", ci "scrie 3 variante de titluri pentru o reclamă Facebook care promovează [produsul], publicul țintă sunt femei 25-40 ani interesate de [subiect]".</p>
+
+  <h3>4. Formatul — cum vrei răspunsul</h3>
+  <p>Spune-i în ce format vrei outputul: listă, paragraf, tabel, cod, etc. Și câte variante vrei dacă ai nevoie de opțiuni.</p>
+
+  <div class="tip-box">
+    <strong>💡 Sfat practic</strong>
+    <p>Adaugă mereu la finalul promptului: "Dacă ai nevoie de informații suplimentare pentru a da un răspuns mai bun, întreabă-mă." Asta activează un comportament mult mai precis din partea AI-ului.</p>
+  </div>
+
+  <h2>Exemplu complet: prompt slab vs prompt bun</h2>
+
+  <h3>Prompt slab</h3>
+  <div class="prompt-box">Scrie-mi o descriere de produs.</div>
+
+  <h3>Prompt bun</h3>
+  <div class="prompt-box">Ești un copywriter specializat în e-commerce. Scrie o descriere de produs pentru o pereche de căști wireless premium, cu următoarele caracteristici: autonomie 30h, ANC activ, conectivitate Bluetooth 5.2, greutate 250g.
+
+Publicul țintă: profesioniști 25-45 ani care lucrează de acasă sau în open space.
+Ton: profesional, dar accesibil. Fără jargon tehnic excesiv.
+Format: paragraf introductiv (2-3 propoziții) + 4 beneficii cheie sub formă de bullet points + call to action.
+Lungime totală: maxim 150 de cuvinte.</div>
+
+  <h2>Cele mai frecvente greșeli</h2>
+  <ul>
+    <li><strong>Prompturi prea scurte</strong> — "Scrie un articol despre AI" nu va da niciodată un rezultat bun. Cu cât mai mult context, cu atât mai bun outputul.</li>
+    <li><strong>Nu specifici publicul țintă</strong> — AI-ul va scrie pentru toată lumea, adică pentru nimeni în particular.</li>
+    <li><strong>Nu specifici tonul</strong> — Fără ton specificat, primești ceva neutru și plictisitor.</li>
+    <li><strong>Aștepți perfectul din prima</strong> — Trateaza primul output ca pe un draft. Iterează: "Acum reface paragraful 2 mai scurt și mai direct".</li>
+    <li><strong>Nu dai exemple</strong> — Dacă vrei un anumit stil, arată-i AI-ului un exemplu. "Scrie în stilul acestui text: [exemplu]".</li>
+  </ul>
+
+  <h2>Tehnica Chain of Thought</h2>
+  <p>Pentru sarcini complexe, cere-i AI-ului să gândească pas cu pas înainte să răspundă. Adaugă la finalul promptului: "Înainte de a răspunde, gândește-te în pași logici la problema mea." Această tehnică îmbunătățește dramatic calitatea răspunsurilor la întrebări analitice sau strategice.</p>
+
+  <h2>Iterarea — secretul pe care nimeni nu îl spune</h2>
+  <p>Cel mai bun prompt nu este cel perfect din prima — este cel rafinat prin iterare. Primești un output, identifici ce nu îți place și dai o instrucțiune de corecție. "Paragraful 3 este prea lung, rescrie-l în maxim 2 propoziții." Sau: "Tonul este prea formal, fă-l mai conversațional." Fiecare iterare îmbunătățește rezultatul.</p>
+
+  <div class="tip-box">
+    <strong>🎯 Rezumat rapid</strong>
+    <p>Rol + Context + Sarcină clară + Format = prompt bun. Adaugă exemple când poți. Iterează mereu. Tratează AI-ul ca pe un colaborator inteligent care are nevoie de briefing complet — nu ca pe un motor de căutare.</p>
+  </div>
+
+  <div class="article-cta">
+    <h3>Vrei 20 de prompturi gata testate?</h3>
+    <p>Colecția noastră conține prompturi structurate după aceste principii, pentru marketing, copywriting, business, design și mai mult — în română, gata de folosit imediat.</p>
+    <a href="shop.html" class="btn-primary">Explorează Colecția →</a>
+  </div>
+</div>
+</div>
+
+<footer><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="nav-logo"><div class="logo-badge">AI</div><div class="logo-text"><span class="logo-line1">INGINERUL</span><span class="logo-line2">CU AI</span></div></a><p>Colecția #1 de prompturi AI premium în română.</p><div class="social-links"><a href="https://www.instagram.com/inginerulai/" target="_blank">📷</a><a href="https://www.tiktok.com/@inginerulai" target="_blank">🎵</a><a href="https://www.youtube.com/@InginerulCuAi" target="_blank">▶️</a><a href="https://www.facebook.com/profile.php?id=61587983686007" target="_blank">👤</a></div></div><div class="footer-col"><h5>Produse</h5><a href="shop.html">Toate Volumele</a><a href="shop.html#bundles">Bundle-uri</a><a href="shop.html#collection">Complete Collection</a></div><div class="footer-col"><h5>Informații</h5><a href="despre.html">Despre Noi</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div><div class="footer-col"><h5>Legal</h5><a href="termeni.html">Termeni &amp; Condiții</a><a href="confidentialitate.html">Politică Confidențialitate</a><a href="retur.html">Politică Retur</a></div></div><div class="footer-bottom"><span>© 2026 Inginerul Cu AI. Toate drepturile rezervate.</span><span>Făcut cu ⚙️ în România</span></div></div></footer>
+<script src="main.js"></script>
+</body></html>
