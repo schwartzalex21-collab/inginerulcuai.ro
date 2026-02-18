@@ -95,26 +95,6 @@
 }
 .last-row-centered .product-card { width: calc(25% - 15px); max-width: 280px; }
 .featured-full { grid-column: 1 / -1; }
-
-@media (max-width: 900px) {
-  .products-grid-centered { grid-template-columns: repeat(2, 1fr); }
-  .last-row-centered { flex-wrap: wrap; }
-  .last-row-centered .product-card { width: calc(50% - 10px); max-width: none; }
-}
-@media (max-width: 600px) {
-  .products-grid-centered { grid-template-columns: 1fr; }
-  .last-row-centered { flex-direction: column; }
-  .last-row-centered .product-card { width: 100%; max-width: none; }
-
-  /* Hero title - un singur rând pe mobil */
-  .hero-title { font-size: clamp(36px, 10vw, 52px) !important; line-height: 1.15 !important; }
-
-  /* Featured card - layout vertical pe mobil */
-  .card-featured-inner { flex-direction: column !important; align-items: flex-start !important; }
-  .card-featured-price { text-align: left !important; margin-top: 16px; width: 100%; }
-  .card-featured-price .btn-product { width: 100%; justify-content: center; display: flex !important; }
-  .card-featured-price .savings-badge { margin: 8px 0; }
-}
 </style>
 </head>
 <body>
@@ -314,7 +294,7 @@
     <div style="margin-top:20px">
       <div class="product-card card-featured fade-in">
         <div class="featured-ribbon">BEST VALUE</div>
-        <div class="card-featured-inner" style="display:flex; align-items:center; gap:20px; flex-wrap:wrap">
+        <div style="display:flex; align-items:center; gap:20px; flex-wrap:wrap">
           <div>
             <div class="product-tag-vol" style="background:var(--gold);color:#000;margin-bottom:12px">ALL 7</div>
             <div class="product-icon">👑</div>
@@ -323,7 +303,7 @@
             <h3 style="font-size:24px; margin-bottom:8px">Complete Collection — Toate 7 Volume</h3>
             <p>140 prompturi. Arsenalul complet AI în română. Cea mai bună investiție pentru oricine vrea să stăpânească AI-ul.</p>
           </div>
-          <div class="card-featured-price" style="text-align:right; flex-shrink:0">
+          <div style="text-align:right; flex-shrink:0">
             <div class="product-price" style="justify-content:flex-end"><span class="price-old">319 RON</span><span class="price-new gold-price">199 RON</span></div>
             <div class="savings-badge" style="margin:8px 0">Economisești 120 RON</div>
             <a href="shop.html#collection" class="btn-product btn-featured" style="margin-top:8px; display:inline-flex">Cumpără Colecția →</a>
@@ -333,7 +313,7 @@
     </div>
 
     <div class="products-note fade-in">
-      <span>🔒 Plată securizată Stripe · Livrare instant pe email · Acces pe viață · Garanție 14 zile</span>
+      <span>🔒 Plată securizată Stripe · Livrare instant pe email · Acces pe viață</span>
     </div>
   </div>
 </section>
@@ -491,7 +471,7 @@
         <span class="cta-save">Economisești 120 RON</span>
       </div>
       <a href="shop.html#collection" class="btn-primary btn-large">Cumpără Complete Collection →</a>
-      <p class="cta-note">🔒 Plată securizată Stripe · Livrare instant · Acces pe viață · Garanție 14 zile</p>
+      <p class="cta-note">🔒 Plată securizată Stripe · Livrare instant · Acces pe viață</p>
     </div>
   </div>
 </section>
