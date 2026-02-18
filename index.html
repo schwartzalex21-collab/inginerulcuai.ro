@@ -95,6 +95,28 @@
 }
 .last-row-centered .product-card { width: calc(25% - 15px); max-width: 280px; }
 .featured-full { grid-column: 1 / -1; }
+
+@media (max-width: 900px) {
+  .products-grid-centered {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .last-row-centered {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .last-row-centered .product-card { width: calc(50% - 10px); max-width: none; }
+}
+
+@media (max-width: 600px) {
+  .products-grid-centered {
+    grid-template-columns: 1fr;
+  }
+  .last-row-centered {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .last-row-centered .product-card { width: 100%; max-width: none; }
+}
 </style>
 </head>
 <body>
@@ -136,7 +158,7 @@
   <!-- Cărți stânga -->
   <div class="hero-books-left" aria-hidden="true">
     <div class="hbook hb-l1">
-      <div class="hbook-spine hbook-spine-green"></div>
+      <div class="hbook-spine"></div>
       <div class="hbook-label">MARKETING</div>
     </div>
     <div class="hbook hb-l2">
@@ -144,7 +166,7 @@
       <div class="hbook-label">BUSINESS</div>
     </div>
     <div class="hbook hb-l3">
-      <div class="hbook-spine hbook-spine-green"></div>
+      <div class="hbook-spine"></div>
       <div class="hbook-label">COPYWRITING</div>
     </div>
   </div>
