@@ -745,6 +745,57 @@ img {
   align-self: flex-start;
 }
 
+/* Featured Card Layout */
+.featured-content-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.featured-left {
+  flex-shrink: 0;
+}
+
+.featured-center {
+  flex: 1;
+  min-width: 200px;
+}
+
+.featured-right {
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.featured-price {
+  justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  .featured-content-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 16px;
+  }
+
+  .featured-center {
+    min-width: 100%;
+  }
+
+  .featured-right {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .featured-price {
+    justify-content: flex-start;
+  }
+}
+
 .product-icon {
   font-size: 36px;
 }
