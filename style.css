@@ -1770,6 +1770,20 @@ footer {
     margin-top: 4px;
   }
 
+  /* Product Grid Fixes - Stack Vertically */
+  .products-grid-centered {
+    grid-template-columns: 1fr;
+  }
+
+  .last-row-centered {
+    flex-direction: column;
+  }
+
+  .last-row-centered .product-card {
+    width: 100%;
+    max-width: none;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
   }
