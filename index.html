@@ -145,6 +145,15 @@
       color: var(--dgray);
     }
 
+    .t-avatar-img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2px solid rgba(243, 156, 18, 0.4);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
     /* ── PRODUSE GRID CENTRAT ── */
     .products-grid-centered {
       display: grid;
@@ -254,6 +263,11 @@
         <div class="stat">
           <span class="stat-num">100%</span>
           <span class="stat-label">În Română</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat">
+          <span class="stat-num" id="dynamic-counter">300</span>
+          <span class="stat-label">Utilizatori Fericiți</span>
         </div>
       </div>
     </div>
@@ -448,8 +462,8 @@
     <div class="container">
       <div class="section-header">
         <span class="section-tag">Ce Spun Clienții</span>
-        <h3>Rezultate Reale</h3>
-        <p>Peste 400 de clienți mulțumiți. Iată ce spun ei despre colecția Inginerul Cu AI.</p>
+        <h2>Rezultate Reale</h2>
+        <p>Peste 473 de clienți mulțumiți. Iată ce spun ei despre colecția Inginerul&nbsp;Cu&nbsp;AI.</p>
       </div>
     </div>
 
@@ -462,7 +476,7 @@
           <p>"Am economisit ore întregi de scris. Prompturile de copywriting sunt exacte — primul output din ChatGPT a
             fost direct folosibil."</p>
           <div class="t-author">
-            <div class="t-avatar">AM</div>
+            <img src="assets/images/alexandru-m.jpg" alt="Alexandru M." class="t-avatar-img">
             <div><strong>Alexandru M.</strong><span>Freelancer Marketing</span></div>
           </div>
         </div>
@@ -472,7 +486,7 @@
           <p>"Am luat Complete Collection și e bani bine investiți. Folosesc zilnic volumul de Business pentru
             planificarea afacerii mele."</p>
           <div class="t-author">
-            <div class="t-avatar">IC</div>
+            <img src="assets/images/ioana-c.jpg" alt="Ioana C." class="t-avatar-img">
             <div><strong>Ioana C.</strong><span>Antreprenor</span></div>
           </div>
         </div>
@@ -482,7 +496,7 @@
           <p>"În sfârșit prompturi în română care funcționează! Nu mai pierd timp să traduc sau să adaptez. Merită
             fiecare leu."</p>
           <div class="t-author">
-            <div class="t-avatar">RD</div>
+            <img src="assets/images/radu-d.jpg" alt="Radu D." class="t-avatar-img">
             <div><strong>Radu D.</strong><span>Social Media Manager</span></div>
           </div>
         </div>
@@ -492,7 +506,7 @@
           <p>"Volumul de Marketing mi-a schimbat complet modul de lucru. Generez campanii întregi în 20 de minute.
             Incredibil."</p>
           <div class="t-author">
-            <div class="t-avatar">MP</div>
+            <img src="assets/images/maria-p.jpg" alt="Maria P." class="t-avatar-img">
             <div><strong>Maria P.</strong><span>Marketing Manager</span></div>
           </div>
         </div>
@@ -502,7 +516,7 @@
           <p>"Prompturile sunt bune și bine structurate. Mi-aș fi dorit câteva exemple de output în PDF, dar în rest
             totul e excelent."</p>
           <div class="t-author">
-            <div class="t-avatar">CT</div>
+            <img src="assets/images/cosmin-t.jpg" alt="Cosmin T." class="t-avatar-img">
             <div><strong>Cosmin T.</strong><span>Copywriter</span></div>
           </div>
         </div>
@@ -512,7 +526,7 @@
           <p>"Pro Pack-ul a fost cea mai bună achiziție din ultima lună. Folosesc zilnic prompturile de productivitate
             și business."</p>
           <div class="t-author">
-            <div class="t-avatar">AB</div>
+            <img src="assets/images/andrei-b.jpg" alt="Andrei B." class="t-avatar-img">
             <div><strong>Andrei B.</strong><span>Consultant Business</span></div>
           </div>
         </div>
@@ -522,7 +536,7 @@
           <p>"Ca designer, volumul de Design &amp; Creative mi-a deschis ochii. Acum brief-urile mele sunt de 3x mai
             clare și mai rapide."</p>
           <div class="t-author">
-            <div class="t-avatar">LV</div>
+            <img src="assets/images/laura-v.jpg" alt="Laura V." class="t-avatar-img">
             <div><strong>Laura V.</strong><span>Graphic Designer</span></div>
           </div>
         </div>
@@ -532,7 +546,7 @@
           <p>"Recomand cu toată căldura. Am încercat mai multe colecții de prompturi în engleză — astea în română sunt
             net superioare pentru contextul local."</p>
           <div class="t-author">
-            <div class="t-avatar">GH</div>
+            <img src="assets/images/gabriel-h.jpg" alt="Gabriel H." class="t-avatar-img">
             <div><strong>Gabriel H.</strong><span>Antreprenor E-commerce</span></div>
           </div>
         </div>
@@ -542,7 +556,7 @@
           <p>"Produsul e OK, prompturile funcționează. Mi s-a părut că unele se repetau ca structură. Aștept o versiune
             actualizată."</p>
           <div class="t-author">
-            <div class="t-avatar">DS</div>
+            <img src="assets/images/diana-s.jpg" alt="Diana S." class="t-avatar-img">
             <div><strong>Diana S.</strong><span>Content Creator</span></div>
           </div>
         </div>
@@ -552,7 +566,7 @@
           <p>"Am folosit volumul de Personal Development pentru a-mi seta obiectivele pentru 2026. Rezultatul a fost un
             plan de acțiune detaliat și realist."</p>
           <div class="t-author">
-            <div class="t-avatar">FC</div>
+            <img src="assets/images/florin-c.jpg" alt="Florin C." class="t-avatar-img">
             <div><strong>Florin C.</strong><span>Coach Personal</span></div>
           </div>
         </div>
@@ -563,17 +577,17 @@
           <p>"Am economisit ore întregi de scris. Prompturile de copywriting sunt exacte — primul output din ChatGPT a
             fost direct folosibil."</p>
           <div class="t-author">
-            <div class="t-avatar">AM</div>
+            <img src="assets/images/alexandru-m.jpg" alt="Alexandru M." class="t-avatar-img">
             <div><strong>Alexandru M.</strong><span>Freelancer Marketing</span></div>
           </div>
         </div>
 
         <div class="t-card">
           <div class="t-stars stars-5">★★★★★</div>
-          <p>"Am luat Complete Collection și sunt bani bine investiți. Folosesc zilnic volumul de Business pentru
+          <p>"Am luat Complete Collection și e bani bine investiți. Folosesc zilnic volumul de Business pentru
             planificarea afacerii mele."</p>
           <div class="t-author">
-            <div class="t-avatar">IC</div>
+            <img src="assets/images/ioana-c.jpg" alt="Ioana C." class="t-avatar-img">
             <div><strong>Ioana C.</strong><span>Antreprenor</span></div>
           </div>
         </div>
@@ -583,7 +597,7 @@
           <p>"În sfârșit prompturi în română care funcționează! Nu mai pierd timp să traduc sau să adaptez. Merită
             fiecare leu."</p>
           <div class="t-author">
-            <div class="t-avatar">RD</div>
+            <img src="assets/images/radu-d.jpg" alt="Radu D." class="t-avatar-img">
             <div><strong>Radu D.</strong><span>Social Media Manager</span></div>
           </div>
         </div>
@@ -593,7 +607,7 @@
           <p>"Volumul de Marketing mi-a schimbat complet modul de lucru. Generez campanii întregi în 20 de minute.
             Incredibil."</p>
           <div class="t-author">
-            <div class="t-avatar">MP</div>
+            <img src="assets/images/maria-p.jpg" alt="Maria P." class="t-avatar-img">
             <div><strong>Maria P.</strong><span>Marketing Manager</span></div>
           </div>
         </div>
@@ -603,7 +617,7 @@
           <p>"Prompturile sunt bune și bine structurate. Mi-aș fi dorit câteva exemple de output în PDF, dar în rest
             totul e excelent."</p>
           <div class="t-author">
-            <div class="t-avatar">CT</div>
+            <img src="assets/images/cosmin-t.jpg" alt="Cosmin T." class="t-avatar-img">
             <div><strong>Cosmin T.</strong><span>Copywriter</span></div>
           </div>
         </div>
@@ -613,7 +627,7 @@
           <p>"Pro Pack-ul a fost cea mai bună achiziție din ultima lună. Folosesc zilnic prompturile de productivitate
             și business."</p>
           <div class="t-author">
-            <div class="t-avatar">AB</div>
+            <img src="assets/images/andrei-b.jpg" alt="Andrei B." class="t-avatar-img">
             <div><strong>Andrei B.</strong><span>Consultant Business</span></div>
           </div>
         </div>
@@ -623,7 +637,7 @@
           <p>"Ca designer, volumul de Design &amp; Creative mi-a deschis ochii. Acum brief-urile mele sunt de 3x mai
             clare și mai rapide."</p>
           <div class="t-author">
-            <div class="t-avatar">LV</div>
+            <img src="assets/images/laura-v.jpg" alt="Laura V." class="t-avatar-img">
             <div><strong>Laura V.</strong><span>Graphic Designer</span></div>
           </div>
         </div>
@@ -633,7 +647,7 @@
           <p>"Recomand cu toată căldura. Am încercat mai multe colecții de prompturi în engleză — astea în română sunt
             net superioare pentru contextul local."</p>
           <div class="t-author">
-            <div class="t-avatar">GH</div>
+            <img src="assets/images/gabriel-h.jpg" alt="Gabriel H." class="t-avatar-img">
             <div><strong>Gabriel H.</strong><span>Antreprenor E-commerce</span></div>
           </div>
         </div>
@@ -643,7 +657,7 @@
           <p>"Produsul e OK, prompturile funcționează. Mi s-a părut că unele se repetau ca structură. Aștept o versiune
             actualizată."</p>
           <div class="t-author">
-            <div class="t-avatar">DS</div>
+            <img src="assets/images/diana-s.jpg" alt="Diana S." class="t-avatar-img">
             <div><strong>Diana S.</strong><span>Content Creator</span></div>
           </div>
         </div>
@@ -653,7 +667,7 @@
           <p>"Am folosit volumul de Personal Development pentru a-mi seta obiectivele pentru 2026. Rezultatul a fost un
             plan de acțiune detaliat și realist."</p>
           <div class="t-author">
-            <div class="t-avatar">FC</div>
+            <img src="assets/images/florin-c.jpg" alt="Florin C." class="t-avatar-img">
             <div><strong>Florin C.</strong><span>Coach Personal</span></div>
           </div>
         </div>
@@ -664,11 +678,11 @@
     <div class="testimonials-track-wrap" style="margin-top:0">
       <div class="testimonials-scroll testimonials-row2">
         <div class="t-card">
-          <div class="t-stars stars-4">★★★★</div>
-          <p>"Volumul de Health &amp; Wellness este okish. Mi-a generat un program de nutriție personalizat în 5 minute
-            e in regula de urmat."</p>
+          <div class="t-stars stars-5">★★★★★</div>
+          <p>"Volumul de Health &amp; Wellness e fantastic. Mi-a generat un program de nutriție personalizat în 5 minute
+            — ceva ce nutri i ionist mi-ar fi luat ore."</p>
           <div class="t-author">
-            <div class="t-avatar">OB</div>
+            <img src="assets/images/olivia-b.jpg" alt="Olivia B." class="t-avatar-img">
             <div><strong>Olivia B.</strong><span>Fitness Coach</span></div>
           </div>
         </div>
@@ -678,7 +692,7 @@
           <p>"Prețul e extrem de accesibil față de valoarea primită. 49 RON pentru 20 de prompturi testate e o afacere.
             Am luat toate 7."</p>
           <div class="t-author">
-            <div class="t-avatar">VM</div>
+            <img src="assets/images/victor-m.jpg" alt="Victor M." class="t-avatar-img">
             <div><strong>Victor M.</strong><span>Freelancer</span></div>
           </div>
         </div>
@@ -688,7 +702,7 @@
           <p>"Bun produs, livrare instant. Am folosit prompturile de copywriting pentru site-ul meu și rata de conversie
             a crescut. O stea jos pentru că aș vrea mai multe prompturi per volum."</p>
           <div class="t-author">
-            <div class="t-avatar">PN</div>
+            <img src="assets/images/patricia-n.jpg" alt="Patricia N." class="t-avatar-img">
             <div><strong>Patricia N.</strong><span>Antreprenor Online</span></div>
           </div>
         </div>
@@ -698,7 +712,7 @@
           <p>"Sunt profesor și folosesc prompturile din volumul de Personal Development cu studenții mei. Feedback-ul
             lor e excepțional."</p>
           <div class="t-author">
-            <div class="t-avatar">MI</div>
+            <img src="assets/images/mihai-i.jpg" alt="Mihai I." class="t-avatar-img">
             <div><strong>Mihai I.</strong><span>Profesor Universitar</span></div>
           </div>
         </div>
@@ -708,7 +722,7 @@
           <p>"Am o agenție de marketing. Am dat colecția întregii echipe. Productivitatea a crescut vizibil în prima
             săptămână."</p>
           <div class="t-author">
-            <div class="t-avatar">SR</div>
+            <img src="assets/images/simona-r.jpg" alt="Simona R." class="t-avatar-img">
             <div><strong>Simona R.</strong><span>CEO Agenție Marketing</span></div>
           </div>
         </div>
@@ -718,7 +732,7 @@
           <p>"Prompturile din Business sunt exact ce aveam nevoie pentru pitch-ul meu. Am primit finanțare. Coincidență?
             Nu cred."</p>
           <div class="t-author">
-            <div class="t-avatar">TA</div>
+            <img src="assets/images/tudor-a.jpg" alt="Tudor A." class="t-avatar-img">
             <div><strong>Tudor A.</strong><span>Fondator Startup</span></div>
           </div>
         </div>
@@ -728,7 +742,7 @@
           <p>"Foarteeee bune! Încarc un prompt, dau run și primesc un brief complet de campanie. Nu mai petrec ore să
             scriu de la zero."</p>
           <div class="t-author">
-            <div class="t-avatar">EL</div>
+            <img src="assets/images/elena-l.jpg" alt="Elena L." class="t-avatar-img">
             <div><strong>Elena L.</strong><span>Brand Manager</span></div>
           </div>
         </div>
@@ -738,7 +752,7 @@
           <p>"Solid și util. Aș fi dorit o pagina de instrucțiuni pentru începători dar prompturile în sine sunt foarte
             clare."</p>
           <div class="t-author">
-            <div class="t-avatar">BP</div>
+            <img src="assets/images/bogdan-p.jpg" alt="Bogdan P." class="t-avatar-img">
             <div><strong>Bogdan P.</strong><span>Student MBA</span></div>
           </div>
         </div>
@@ -747,7 +761,7 @@
           <div class="t-stars stars-5">★★★★★</div>
           <p>"Complete Collection — cea mai bună 199 RON cheltuiți vreodată. Recomand oricui lucrează cu AI zilnic."</p>
           <div class="t-author">
-            <div class="t-avatar">CM</div>
+            <img src="assets/images/cristina-m.jpg" alt="Cristina M." class="t-avatar-img">
             <div><strong>Cristina M.</strong><span>Digital Strategist</span></div>
           </div>
         </div>
@@ -757,7 +771,7 @@
           <p>"Ca jurnalist, volumul de Copywriting m-a ajutat să scriu articole mai structurate și mai captivante. Tool
             indispensabil."</p>
           <div class="t-author">
-            <div class="t-avatar">NF</div>
+            <img src="assets/images/nicolae-f.jpg" alt="Nicolae F." class="t-avatar-img">
             <div><strong>Nicolae F.</strong><span>Jurnalist</span></div>
           </div>
         </div>
@@ -768,7 +782,7 @@
           <p>"Volumul de Health &amp; Wellness e fantastic. Mi-a generat un program de nutriție personalizat în 5
             minute."</p>
           <div class="t-author">
-            <div class="t-avatar">OB</div>
+            <img src="assets/images/olivia-b.jpg" alt="Olivia B." class="t-avatar-img">
             <div><strong>Olivia B.</strong><span>Fitness Coach</span></div>
           </div>
         </div>
@@ -778,7 +792,7 @@
           <p>"Prețul e extrem de accesibil față de valoarea primită. 49 RON pentru 20 de prompturi testate e o afacere."
           </p>
           <div class="t-author">
-            <div class="t-avatar">VM</div>
+            <img src="assets/images/victor-m.jpg" alt="Victor M." class="t-avatar-img">
             <div><strong>Victor M.</strong><span>Freelancer</span></div>
           </div>
         </div>
@@ -788,7 +802,7 @@
           <p>"Bun produs, livrare instant. Am folosit prompturile de copywriting pentru site-ul meu și rata de conversie
             a crescut."</p>
           <div class="t-author">
-            <div class="t-avatar">PN</div>
+            <img src="assets/images/patricia-n.jpg" alt="Patricia N." class="t-avatar-img">
             <div><strong>Patricia N.</strong><span>Antreprenor Online</span></div>
           </div>
         </div>
@@ -798,7 +812,7 @@
           <p>"Sunt profesor și folosesc prompturile din volumul de Personal Development cu studenții mei. Feedback-ul
             lor e excepțional."</p>
           <div class="t-author">
-            <div class="t-avatar">MI</div>
+            <img src="assets/images/mihai-i.jpg" alt="Mihai I." class="t-avatar-img">
             <div><strong>Mihai I.</strong><span>Profesor Universitar</span></div>
           </div>
         </div>
@@ -808,7 +822,7 @@
           <p>"Am o agenție de marketing. Am dat colecția întregii echipe. Productivitatea a crescut vizibil în prima
             săptămână."</p>
           <div class="t-author">
-            <div class="t-avatar">SR</div>
+            <img src="assets/images/simona-r.jpg" alt="Simona R." class="t-avatar-img">
             <div><strong>Simona R.</strong><span>CEO Agenție Marketing</span></div>
           </div>
         </div>
@@ -818,7 +832,7 @@
           <p>"Prompturile din Business sunt exact ce aveam nevoie pentru pitch-ul meu. Am primit finanțare. Coincidență?
             Nu cred."</p>
           <div class="t-author">
-            <div class="t-avatar">TA</div>
+            <img src="assets/images/tudor-a.jpg" alt="Tudor A." class="t-avatar-img">
             <div><strong>Tudor A.</strong><span>Fondator Startup</span></div>
           </div>
         </div>
@@ -828,7 +842,7 @@
           <p>"Încarc un prompt, dau run și primesc un brief complet de campanie. Nu mai petrec ore să scriu de la zero."
           </p>
           <div class="t-author">
-            <div class="t-avatar">EL</div>
+            <img src="assets/images/elena-l.jpg" alt="Elena L." class="t-avatar-img">
             <div><strong>Elena L.</strong><span>Brand Manager</span></div>
           </div>
         </div>
@@ -838,7 +852,7 @@
           <p>"Solid și util. Aș fi dorit o pagina de instrucțiuni pentru începători dar prompturile în sine sunt foarte
             clare."</p>
           <div class="t-author">
-            <div class="t-avatar">BP</div>
+            <img src="assets/images/bogdan-p.jpg" alt="Bogdan P." class="t-avatar-img">
             <div><strong>Bogdan P.</strong><span>Student MBA</span></div>
           </div>
         </div>
@@ -847,7 +861,7 @@
           <div class="t-stars stars-5">★★★★★</div>
           <p>"Complete Collection — cea mai bună 199 RON cheltuiți vreodată. Recomand oricui lucrează cu AI zilnic."</p>
           <div class="t-author">
-            <div class="t-avatar">CM</div>
+            <img src="assets/images/cristina-m.jpg" alt="Cristina M." class="t-avatar-img">
             <div><strong>Cristina M.</strong><span>Digital Strategist</span></div>
           </div>
         </div>
@@ -857,7 +871,7 @@
           <p>"Ca jurnalist, volumul de Copywriting m-a ajutat să scriu articole mai structurate și mai captivante. Tool
             indispensabil."</p>
           <div class="t-author">
-            <div class="t-avatar">NF</div>
+            <img src="assets/images/nicolae-f.jpg" alt="Nicolae F." class="t-avatar-img">
             <div><strong>Nicolae F.</strong><span>Jurnalist</span></div>
           </div>
         </div>

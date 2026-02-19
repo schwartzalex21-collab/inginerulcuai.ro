@@ -1848,3 +1848,14 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 600px) {
+  .hero-stats {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .stat-div {
+    display: none;
+  }
+}

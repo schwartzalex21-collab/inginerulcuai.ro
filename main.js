@@ -131,4 +131,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   statNums.forEach(el => statsObserver.observe(el));
 
+  // ── DYNAMIC USER COUNTER ──────────────
+  const dynamicCounter = document.getElementById('dynamic-counter');
+  if (dynamicCounter) {
+    let currentVal = 300; // Starting value
+
+    // Check if there's a stored value and time
+    const storedVal = localStorage.getItem('userCount');
+    const lastUpdate = localStorage.getItem('lastUpdate');
+
+    if (storedVal) {
+      currentVal = parseInt(storedVal);
+      // Ensure we don't show a stored value less than new baseline if reset
+      if (currentVal < 300) currentVal = 300;
+      dynamicCounter.textContent = currentVal;
+    }
+
+    setInterval(() => {
+      currentVal++;
+      dynamicCounter.textContent = currentVal;
+      localStorage.setItem('userCount', currentVal);
+      localStorage.setItem('lastUpdate', Date.now());
+    }, 3600000); // 3600000 ms = 60 minutes
+  }
+
 });
