@@ -155,6 +155,44 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3600000); // 3600000 ms = 60 minutes
   }
 
+  // ── 48H LOOPING HERO TIMER ──────────────
+  const heroTimer = document.querySelector('#heroTimer .time-bold');
+  if (heroTimer) {
+    const loopTime = 48 * 60 * 60 * 1000;
+
+    let endTime = localStorage.getItem('heroTimerEnd');
+    if (!endTime || Date.now() > parseInt(endTime)) {
+      endTime = Date.now() + loopTime;
+      localStorage.setItem('heroTimerEnd', endTime);
+    } else {
+      endTime = parseInt(endTime);
+    }
+
+    function updateHeroTimer() {
+      const now = Date.now();
+      let diff = endTime - now;
+
+      if (diff <= 0) {
+        endTime = now + loopTime;
+        localStorage.setItem('heroTimerEnd', endTime);
+        diff = loopTime;
+      }
+
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      const fh = hours.toString().padStart(2, '0');
+      const fm = mins.toString().padStart(2, '0');
+      const fs = secs.toString().padStart(2, '0');
+
+      heroTimer.innerHTML = `${fh} ore ${fm} min ${fs} sec`;
+    }
+
+    updateHeroTimer();
+    setInterval(updateHeroTimer, 1000);
+  }
+
   // ── MODAL / POPUP SYSTEM ──────────────
   const modalTriggers = document.querySelectorAll('[data-modal-target]');
   const modals = document.querySelectorAll('.modal-overlay');
