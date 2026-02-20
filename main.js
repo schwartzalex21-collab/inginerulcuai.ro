@@ -155,4 +155,76 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3600000); // 3600000 ms = 60 minutes
   }
 
+  // ── MODAL / POPUP SYSTEM ──────────────
+  const modalTriggers = document.querySelectorAll('[data-modal-target]');
+  const modals = document.querySelectorAll('.modal-overlay');
+  const modalCloses = document.querySelectorAll('.modal-close');
+
+  function openModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden'; // Prevent background scroll
+    }
+  }
+
+  function closeModal(modal) {
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  modalTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = btn.getAttribute('data-modal-target');
+      openModal(targetId);
+    });
+  });
+
+  modalCloses.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const modal = btn.closest('.modal-overlay');
+      closeModal(modal);
+    });
+  });
+
+  modals.forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      // Close only if clicking on the overlay background, not the content
+      if (e.target === modal) {
+        closeModal(modal);
+      }
+    });
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      const activeModal = document.querySelector('.modal-overlay.active');
+      if (activeModal) closeModal(activeModal);
+    }
+  });
+
+  // ── SCROLL TO TOP ─────────────────────
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+  if (scrollToTopBtn) {
+    window.addEventListener('scroll', () => {
+      // Show button if scrolled more than 300px
+      if (window.scrollY > 300) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
 });
