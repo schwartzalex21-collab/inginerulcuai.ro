@@ -2660,3 +2660,41 @@ nav {
     margin-top: 8px;
   }
 }
+/* ══════════════════════════════════════
+   SVG ICONS (înlocuiesc emoji-urile)
+══════════════════════════════════════ */
+.site-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  stroke: currentColor;
+  fill: none;
+  flex-shrink: 0;
+}
+.site-icon.star-filled {
+  fill: currentColor;
+  stroke: none;
+}
+.product-icon .site-icon {
+  width: 36px;
+  height: 36px;
+  stroke-width: 1.5;
+}
+.social-links a .site-icon {
+  width: 18px;
+  height: 18px;
+}
+.trust-badges .site-icon,
+.cta-note .site-icon,
+.products-note .site-icon {
+  width: 14px;
+  height: 14px;
+}
+.t-stars .site-icon,
+.stars .site-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  stroke: none;
+}
