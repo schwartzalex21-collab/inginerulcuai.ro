@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Despre Noi — Inginerul Cu AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div style="display:none" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg">
+      <symbol id="ico-timer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="13" r="8" />
+        <path d="M12 9v4l2.5 2.5" />
+        <path d="M9 3h6" />
+        <path d="M12 3v2" />
+      </symbol>
+      <symbol id="ico-infinity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 12c-2-2.5-4-4-6-4a4 4 0 0 0 0 8c2 0 4-1.5 6-4z" />
+        <path d="M12 12c2 2.5 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.5-6 4z" />
+      </symbol>
+      <symbol id="ico-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3" />
+        <path
+          d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+      </symbol>
+      <symbol id="ico-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+      </symbol>
+      <symbol id="ico-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M12 20h9" />
+        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+      </symbol>
+      <symbol id="ico-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="13.5" cy="6.5" r="1" />
+        <circle cx="17.5" cy="10.5" r="1" />
+        <circle cx="8.5" cy="7.5" r="1" />
+        <circle cx="6.5" cy="12.5" r="1" />
+        <path
+          d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.476-1.125-.29-.289-.479-.68-.479-1.125a1.625 1.625 0 0 1 1.625-1.625h1.921c3.005 0 5.441-2.436 5.441-5.442C22 6.11 17.5 2 12 2z" />
+      </symbol>
+      <symbol id="ico-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <circle cx="12" cy="12" r="6" />
+        <circle cx="12" cy="12" r="2" />
+      </symbol>
+      <symbol id="ico-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18V5l12-2v13" />
+        <circle cx="6" cy="18" r="3" />
+        <circle cx="18" cy="16" r="3" />
+      </symbol>
+      <symbol id="ico-crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 17l2-9 5 5 3-8 3 8 5-5 2 9z" />
+        <rect x="2" y="17" width="20" height="2" rx="1" />
+      </symbol>
+      <symbol id="ico-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+        <circle cx="12" cy="7" r="4" />
+      </symbol>
+      <symbol id="ico-diamond" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 22 9 18 21 6 21 2 9" />
+        <line x1="2" y1="9" x2="22" y2="9" />
+      </symbol>
+      <symbol id="ico-muscle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M18 15.5c0 1.5-1.5 4.5-4 4.5s-4-2-4-4c0-1 .5-2 1-2.5l2-2c.5-.5 1-1.5 1-2.5 0-1.7-1.3-3-3-3S8 7.3 8 9" />
+      </symbol>
+      <symbol id="ico-laptop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2" />
+        <line x1="2" y1="20" x2="22" y2="20" />
+      </symbol>
+      <symbol id="ico-books" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+        <line x1="12" y1="6" x2="16" y2="6" />
+        <line x1="12" y1="10" x2="16" y2="10" />
+      </symbol>
+      <symbol id="ico-megaphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 11l18-5v12L3 13v-2z" />
+        <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+      </symbol>
+      <symbol id="ico-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+        <circle cx="12" cy="13" r="4" />
+      </symbol>
+      <symbol id="ico-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+      </symbol>
+      <symbol id="ico-fire" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2c0 0-5 5-5 11a5 5 0 0 0 10 0c0-6-5-11-5-11z" />
+        <path d="M12 12c0 0-2 2-2 4a2 2 0 0 0 4 0c0-2-2-4-2-4z" />
+      </symbol>
+      <symbol id="ico-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+        <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+      </symbol>
+      <symbol id="ico-robot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="10" rx="2" />
+        <circle cx="12" cy="5" r="2" />
+        <line x1="12" y1="7" x2="12" y2="11" />
+        <circle cx="8" cy="16" r="1" fill="currentColor" />
+        <circle cx="16" cy="16" r="1" fill="currentColor" />
+        <path d="M8 19h8" />
+        <line x1="3" y1="14" x2="1" y2="14" />
+        <line x1="21" y1="14" x2="23" y2="14" />
+      </symbol>
+      <symbol id="ico-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5a3 3 0 0 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+        <path d="M12 5a3 3 0 0 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+        <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+      </symbol>
+      <symbol id="ico-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <polygon points="10 8 16 12 10 16 10 8" />
+      </symbol>
+      <symbol id="ico-star" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+        <polygon
+          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </symbol>
+      <symbol id="ico-star-empty" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polygon
+          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </symbol>
+    </svg></div>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-badge">AI</div>
+        <div class="logo-text"><span class="logo-line1">INGINERUL</span><span class="logo-line2">CU AI</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="shop.html">Produse</a></li>
+        <li><a href="despre.html" class="active">Despre</a></li>
+        <li><a href="rezultate.html">Rezultate</a></li>
+        <li></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="shop.html" class="btn-nav">Vezi Produsele →</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Acasă</a><a href="shop.html">Produse</a><a href="despre.html">Despre</a><a
+        href="rezultate.html">Rezultate</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+      <a href="shop.html" class="btn-mobile">Vezi Produsele →</a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="glow glow-1"></div>
+    </div>
+    <div class="container">
+      <span class="section-tag">Povestea Noastră</span>
+      <h1>Despre <span class="gold">Inginerul Cu AI</span></h1>
+      <p>De ce am creat cea mai bună colecție de prompturi AI în română și ce ne motivează.</p>
+    </div>
+  </section>
+
+  <section class="about-content">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <h2>AI-ul nu mai este<br><span class="gold">doar pentru experți.</span></h2>
+          <p>Am creat Inginerul Cu AI dintr-o frustrare reală: toate resursele de AI prompts erau în engleză, slab
+            adaptate pentru contextul românesc și pline de teorie fără aplicare practică.</p>
+          <p>Noi am ales altă cale. Fiecare prompt din colecția noastră a fost scris, testat și rafinat în română,
+            pentru probleme reale cu care se confruntă antreprenorii, freelancerii și profesioniștii români.</p>
+          <p>Rezultatul: 160 de prompturi care funcționează de prima dată, în orice tool AI, fără configurare
+            suplimentară.</p>
+          <a href="shop.html" class="btn-primary" style="margin-top:8px">Explorează Colecția →</a>
+        </div>
+        <div class="about-values fade-in">
+          <div class="value-item">
+            <h4><svg class="site-icon" aria-hidden="true">
+                <use href="#ico-bolt" />
+              </svg> Aplicabilitate Imediată</h4>
+            <p>Nu scriem despre AI. Scriem cu AI. Fiecare prompt e gata să fie copiat și folosit acum, fără modificări.
+            </p>
+          </div>
+          <div class="value-item">
+            <h4>🇷🇴 100% Contextualizat pentru România</h4>
+            <p>Nu traducem din engleză. Scriem direct în română, cu exemple și referințe relevante pentru piața locală.
+            </p>
+          </div>
+          <div class="value-item">
+            <h4><svg class="site-icon" aria-hidden="true">
+                <use href="#ico-diamond" />
+              </svg> Premium, Nu Ieftin</h4>
+            <p>Fiecare volum e structurat profesional, testat pe multiple platforme AI și updatat regulat.</p>
+          </div>
+          <div class="value-item">
+            <h4><svg class="site-icon" aria-hidden="true">
+                <use href="#ico-target" />
+              </svg> Rezultate Măsurabile</h4>
+            <p>Credem în output concret. Prompturile noastre generează conținut, strategii și idei direct folosibile.
+            </p>
+          </div>
+          <div class="value-item">
+            <h4><svg class="site-icon" aria-hidden="true">
+                <use href="#ico-books" />
+              </svg> Educație, Nu Dependență</h4>
+            <p>Vrem să înveți să gândești cu AI, nu doar să copiezi prompturi. De aceea includem context și explicații.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="features-strip">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feat-icon"><svg class="site-icon" aria-hidden="true">
+              <use href="#ico-books" />
+            </svg></div>
+          <div><strong>8 Volume</strong><span>Specializate pe domenii clare</span></div>
+        </div>
+        <div class="feat-divider"></div>
+        <div class="feature-item">
+          <div class="feat-icon"><svg class="site-icon" aria-hidden="true">
+              <use href="#ico-robot" />
+            </svg></div>
+          <div><strong>160 Prompturi</strong><span>Testate și rafinate</span></div>
+        </div>
+        <div class="feat-divider"></div>
+        <div class="feature-item">
+          <div class="feat-icon">🇷🇴</div>
+          <div><strong>100% Română</strong><span>Scrise nativ, nu traduse</span></div>
+        </div>
+        <div class="feat-divider"></div>
+        <div class="feature-item">
+          <div class="feat-icon"><svg class="site-icon" aria-hidden="true">
+              <use href="#ico-bolt" />
+            </svg></div>
+          <div><strong>Instant</strong><span>Livrare automată pe email</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-glow"></div>
+        <span class="section-tag">Hai să Începem</span>
+        <h2>Gata să folosești AI<br><span class="gold">ca un Profesionist?</span></h2>
+        <p>Alătură-te celor care lucrează mai smart cu AI. 8 Volume Colecția Completă — toate 8 volume la 199 RON.</p>
+        <div class="cta-price">
+          <span class="cta-old">Valoare normală: 552 RON</span>
+          <span class="cta-new">199 RON</span>
+          <span class="cta-save">Economisești 353 RON</span>
+        </div>
+        <a href="shop.html#collection" class="btn-primary btn-large">Cumpără 8 Volume Colecția Completă →</a>
+        <p class="cta-note"><svg class="site-icon" aria-hidden="true">
+            <use href="#ico-lock" />
+          </svg> Plată securizată · Livrare instant · Acces pe Viață</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="logo-badge">AI</div>
+            <div class="logo-text"><span class="logo-line1">INGINERUL</span><span class="logo-line2">CU AI</span></div>
+          </a>
+          <p>Colecția #1 de prompturi AI premium în română.</p>
+          <div class="social-links"><a href="https://www.instagram.com/inginerulai/" target="_blank" rel="noopener"
+              aria-label="Instagram"><svg class="site-icon" aria-hidden="true">
+                <use href="#ico-camera" />
+              </svg></a><a href="https://www.tiktok.com/@inginerulai" target="_blank" rel="noopener"
+              aria-label="TikTok"><svg class="site-icon" aria-hidden="true">
+                <use href="#ico-music" />
+              </svg></a><a href="https://www.youtube.com/@InginerulCuAi" target="_blank" rel="noopener"
+              aria-label="YouTube"><svg class="site-icon" aria-hidden="true">
+                <use href="#ico-play" />
+              </svg></a><a href="https://www.facebook.com/profile.php?id=61587983686007" target="_blank" rel="noopener"
+              aria-label="Facebook"><svg class="site-icon" aria-hidden="true">
+                <use href="#ico-user" />
+              </svg></a></div>
+        </div>
+        <div class="footer-col">
+          <h5>Produse</h5><a href="shop.html">Toate Volumele</a><a href="shop.html#bundles">Bundle-uri</a><a
+            href="shop.html#collection">8 Volume Colecția Completă</a>
+        </div>
+        <div class="footer-col">
+          <h5>Informații</h5><a href="despre.html">Despre Noi</a><a href="blog.html">Blog</a><a
+            href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5><a href="termeni.html">Termeni & Condiții</a><a href="confidentialitate.html">Politică
+            Confidențialitate</a><a href="retur.html">Politică Retur</a>
+        </div>
+      </div>
+      <div class="footer-bottom"><span>© 2026 Inginerul Cu AI. Toate drepturile rezervate.</span><span>Făcut cu <svg
+            class="site-icon" aria-hidden="true">
+            <use href="#ico-gear" />
+          </svg>️ în
+          România</span></div>
+    </div>
+  </footer>
+
+
+  <!-- ══════════════════════════════════════
+       PRODUCT MODALS
+  ══════════════════════════════════════ -->
+  <div class="modal-overlay" id="modal-vol1">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/popup_vol1_marketing.png" alt="Marketing Digital & Social Media" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Copy & Paste ready</li>
+            <li>Testat pe ChatGPT & Claude</li>
+            <li>Generează strategii complete</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 01 — Marketing Digital</span>
+          <h2 class="modal-title">Campanii și Strategii de Impact</h2>
+          <p class="modal-desc">Fie că lansezi un produs nou sau vrei să îți crești audiența, acest volum îți oferă 20
+            de prompturi create de experți. Generează calendare de conținut pe 30 de zile, analizează competiția și
+            creează funnel-uri de vânzare în câteva secunde.</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest volum:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-vol2">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/laptop_vol2.png" alt="Exemplu Prompt Copywriting" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Framework-uri (AIDA, PAS)</li>
+            <li>Adaptabil pentru orice nișă</li>
+            <li>Texte care convertesc</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 02 — Copywriting</span>
+          <h2 class="modal-title">Texte care Vând pe Pilot Automat</h2>
+          <p class="modal-desc">Transformă AI-ul în cel mai bun copywriter al tău. Acest volum este focusat pe generarea
+            de texte persuasive pentru reclame FB/IG, emailuri de lansare și pagini de vânzare (Landing Pages).</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest volum:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-vol3">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/laptop_vol3.png" alt="Exemplu Prompt Design" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Direcții vizuale clare</li>
+            <li>Prompturi Midjourney & DALL-E</li>
+            <li>Brief-uri structurate</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 03 — Design & Creative</span>
+          <h2 class="modal-title">Direcție Vizuală la Superlativ</h2>
+          <p class="modal-desc">Învață cum să comunici cu AI-ul vizual pentru a obține exact designul pe care ți-l
+            dorești. Ideal pentru generarea de concepte de logo, moodboard-uri și feedback constructiv pentru echipa ta
+            de design.</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest volum:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-vol4">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/laptop_vol4.png" alt="Exemplu Prompt Productivity" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Crește-ți eficiența cu 300%</li>
+            <li>Organizare impecabilă</li>
+            <li>Sisteme automate</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 04 — Productivity</span>
+          <h2 class="modal-title">Câștigă Timp, Elimină Haosul</h2>
+          <p class="modal-desc">Folosește AI-ul pentru a-ți structura săptămâna, pentru a rezuma meeting-uri lungi, sau
+            a-ți construi rutine impenetrabile. Tot ce ai nevoie pentru a deveni mașina perfectă de productivitate.</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest volum:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-vol5">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/laptop_vol5.png" alt="Exemplu Prompt Business" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Planuri de afaceri solide</li>
+            <li>Analiză SWOT asistată</li>
+            <li>Găsirea Nișei Perfecte</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 05 — Business</span>
+          <h2 class="modal-title">Strategii Antreprenoriale Asistate de AI</h2>
+          <p class="modal-desc">Validează-ți ideile de afaceri înainte de a investi bani. Creează pitch-uri pentru
+            investitori, modelează prețurile și descoperă cum să te diferențiezi radical față de competiția ta pe piața
+            din România.</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest volum:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-vol6">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/laptop_vol6.png" alt="Exemplu Prompt Health" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Rutine personalizate</li>
+            <li>Mese și rețete sănătoase</li>
+            <li>Optimizarea somnului</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 06 — Health & Wellness</span>
+          <h2 class="modal-title">Coach-ul Tău Personal AI</h2>
+          <p class="modal-desc">Spune-i AI-ului profilul tău, restricțiile alimentare și obiectivele de fitness, iar el
+            îți va genera un plan de mese și antrenament absolut impecabil. Fără diete generice, totul adaptat fix
+            pentru tine.</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest volum:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-vol7">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/laptop_vol7.png" alt="Exemplu Prompt Personal Dev" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Descoperirea punctelor forte</li>
+            <li>Îmbunătățirea comunicării</li>
+            <li>Shadow Work & Inteligență Emoțională</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 07 — Personal Development</span>
+          <h2 class="modal-title">Evoluează la Nivelul Următor</h2>
+          <p class="modal-desc">Prompturi gândite special pentru reflecție profundă. Folosește ChatGPT ca pe un partener
+            de brainstorming pentru rezolvarea conflictelor interne, setarea obiectivelor pe termen lung și depășirea
+            blocajelor mentale.</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest volum:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-vol8">
+    <div class="modal-content">
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/laptop_vol8.png" alt="Exemplu Prompt Vibe Coding" class="modal-image">
+          <ul class="modal-left-features">
+            <li>CodeGen & Refactoring Rapid</li>
+            <li>Arhitectură de Sistem AI</li>
+            <li>Bug squashing avansat</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 08 — Vibe Coding</span>
+          <h2 class="modal-title">Tastează Mai Puțin, Construiește Mai Mult</h2>
+          <p class="modal-desc">Ghidul tău suprem pentru a programa alături de Cursor, GitHub Copilot și ChatGPT.
+            Prompturi avansate de arhitectură, testare unitară automată, și instrucțiuni pentru ca AI-ul să scrie
+            aplicații întregi în locul tău.</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest volum:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-bundle1">
+
+    <div class="modal-overlay" id="modal-bundle2">
+      <div class="modal-content" style="border-color: rgba(155, 89, 182, 0.4);">
+        <button class="modal-close">&times;</button>
+        <div class="modal-grid">
+          <div class="modal-left">
+            <img src="assets/prompt_example.png" alt="Exemplu Pro Pack" class="modal-image">
+            <ul class="modal-left-features">
+              <li>Acoperi ariile majore de business</li>
+              <li>Combină skill-urile de care ai nevoie</li>
+              <li>100 Prompturi premium totale</li>
+            </ul>
+          </div>
+          <div class="modal-right">
+            <span class="modal-tag"
+              style="background: rgba(155,89,182,0.1); color: #c39bd3; border-color: rgba(155,89,182,0.3);">Pachet
+              Pro</span>
+            <h2 class="modal-title">Pro Pack (Oricare 5 Volume)</h2>
+            <p class="modal-desc">Fii pregătit pentru orice provocare. Pachetul Pro îți permite să selectezi 5 volume la
+              alegere, oferindu-ți 100 de prompturi premium la un preț incredibil de bun.</p>
+
+            <div class="modal-includes">
+              <h4>Ce este inclus:</h4>
+              <ul>
+                <li><strong>5 Volume</strong> (100 Prompturi)</li>
+                <li>Acces nelimitat imediat</li>
+                <li>Instrucțiuni complete per volum</li>
+                <li>Format PDF pe orice device</li>
+              </ul>
+            </div>
+
+            <div class="modal-price-box">
+              <span class="modal-price-val">139 RON</span>
+              <a href="https://example.com/checkout" class="modal-btn" style="background:#9b59b6; color:#fff;">Alege
+                Volumele</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+>
+    <div class="modal-content" style="border-color: rgba(46, 204, 113, 0.4);">
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/prompt_example.png" alt="Exemplu Starter Pack" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Echilibrul perfect pret-valoare</li>
+            <li>Combină skill-urile de care ai nevoie</li>
+            <li>60 Prompturi premium totale</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag" style="background: rgba(46,204,113,0.1); color: var(--emerald); border-color: rgba(46,204,113,0.3);">Pachet Promoțional</span>
+          <h2 class="modal-title">Starter Pack (Oricare 3 Volume)</h2>
+          <p class="modal-desc">Ai nevoie doar de anumite arii pentru a performa? Pachetul Starter îți permite să selectezi exact cele 3 arii în care vrei să folosești inteligența artificială, la un preț redus masiv.</p>
+          
+          <div class="modal-includes">
+            <h4>Ce este inclus:</h4>
+            <ul>
+              <li><strong>3 Volume</strong> (60 Prompturi)</li>
+              <li>Acces nelimitat imediat</li>
+              <li>Instrucțiuni complete per volum</li>
+              <li>Format PDF pe orice device</li>
+            </ul>
+          </div>
+          
+          <div class="modal-price-box">
+            <span class="modal-price-val">79 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn" style="background:#2ecc71; color:#fff;">Alege Volumele</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-bundle3">
+    <div class="modal-content" style="border-color: rgba(243, 156, 18, 0.6); box-shadow: 0 40px 100px rgba(243,156,18, 0.15);">
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/prompt_example.png" alt="Exemplu Full Collection" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Arsenalul COMPLET (160 Prompturi)</li>
+            <li>Cea mai bună investiție garantată</li>
+            <li>Actualizări suportate</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag" style="background: rgba(243,156,18,0.2); border-color: var(--gold);">Ofertă de Nerefusat</span>
+          <h2 class="modal-title">8 Volume Colecția Completă</h2>
+          <p class="modal-desc">Transformă-te într-un adevărat maestru al inteligenței artificiale. De la Marketing și Business, până la Vibe Coding și Dezvoltare Personală, cu acest pachet le ai absolut pe toate. Zeci de ore economisite garantat.</p>
+          
+          <div class="modal-includes">
+            <h4>Ce obții azi:</h4>
+            <ul>
+              <li><svg class="site-icon" aria-hidden="true"><use href="#ico-fire"/></svg> MARKETING & SOCIAL MEDIA</li>
+              <li><svg class="site-icon" aria-hidden="true"><use href="#ico-fire"/></svg> COPYWRITING</li>
+              <li><svg class="site-icon" aria-hidden="true"><use href="#ico-fire"/></svg> DESIGN & CREATIVE</li>
+              <li><svg class="site-icon" aria-hidden="true"><use href="#ico-fire"/></svg> PRODUCTIVITY</li>
+              <li><svg class="site-icon" aria-hidden="true"><use href="#ico-fire"/></svg> BUSINESS</li>
+              <li><svg class="site-icon" aria-hidden="true"><use href="#ico-fire"/></svg> HEALTH & WELLNESS</li>
+              <li><svg class="site-icon" aria-hidden="true"><use href="#ico-fire"/></svg> PERSONAL DEVELOPMENT</li>
+              <li><svg class="site-icon" aria-hidden="true"><use href="#ico-fire"/></svg> VIBE CODING</li>
+            </ul>
+          </div>
+          
+          <div class="modal-price-box">
+            <span class="modal-price-val">199 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Cumpără Tot Acum</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MOBILE FLOATING CTA -->
+    <div class="mobile-floating-cta" id="mobileCta">
+      <div class="m-cta-content">
+        <a href="shop.html#collection" class="btn-primary m-cta-btn">Cumpără 8 Volume Colecția Completă</a>
+      </div>
+    </div>
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">↑</button>
+    <script src="main.js"></script>
+</body>
+
+</html>

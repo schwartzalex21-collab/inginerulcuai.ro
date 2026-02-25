@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Inginerul Cu AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-badge">AI</div>
+      <div class="logo-text"><span class="logo-line1">INGINERUL</span><span class="logo-line2">CU AI</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Acasă</a></li>
+      <li><a href="shop.html">Produse</a></li>
+      <li><a href="despre.html">Despre</a></li>
+        <li><a href="rezultate.html">Rezultate</a></li>
+        <li></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a href="shop.html" class="btn-nav">Vezi Produsele →</a>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Acasă</a><a href="shop.html">Produse</a><a href="despre.html">Despre</a><a href="rezultate.html">Rezultate</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+    <a href="shop.html" class="btn-mobile">Vezi Produsele →</a>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="hero-bg"><div class="grid-overlay"></div><div class="glow glow-1"></div></div>
+  <div class="container">
+    <span class="section-tag">Suntem Aici</span>
+    <h1>Ia <span class="gold">Legătura</span> cu Noi</h1>
+    <p>Ai întrebări despre produse, colaborări sau orice altceva? Îți răspundem în maxim 24-48 de ore.</p>
+  </div>
+</section>
+
+<section style="padding:20px 0 100px">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-info fade-in">
+        <h2>Cum te putem <span class="gold">ajuta?</span></h2>
+        <p>Fie că ai o întrebare despre un produs, vrei să colaborăm sau ai nevoie de asistență, suntem disponibili.</p>
+
+        <div class="contact-items">
+          <a href="mailto:inginerulcuai@gmail.com" class="contact-item" style="text-decoration:none; display:flex; cursor:pointer">
+            <div class="contact-icon">📧</div>
+            <div>
+              <strong>Email</strong>
+              <span>inginerulcuai@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://www.instagram.com/inginerulai/" target="_blank" rel="noopener" class="contact-item" style="text-decoration:none; display:flex">
+            <div class="contact-icon">📷</div>
+            <div>
+              <strong>Instagram</strong>
+              <span>@inginerulai</span>
+            </div>
+          </a>
+          <a href="https://www.tiktok.com/@inginerulai" target="_blank" rel="noopener" class="contact-item" style="text-decoration:none; display:flex">
+            <div class="contact-icon">🎵</div>
+            <div>
+              <strong>TikTok</strong>
+              <span>@inginerulai</span>
+            </div>
+          </a>
+          <a href="https://www.youtube.com/@InginerulCuAi" target="_blank" rel="noopener" class="contact-item" style="text-decoration:none; display:flex">
+            <div class="contact-icon">▶️</div>
+            <div>
+              <strong>YouTube</strong>
+              <span>Inginerul Cu AI</span>
+            </div>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61587983686007" target="_blank" rel="noopener" class="contact-item" style="text-decoration:none; display:flex">
+            <div class="contact-icon">👤</div>
+            <div>
+              <strong>Facebook</strong>
+              <span>Inginerul Cu AI</span>
+            </div>
+          </a>
+          <div class="contact-item">
+            <div class="contact-icon">⏱️</div>
+            <div>
+              <strong>Timp de răspuns</strong>
+              <span>24-48 ore lucrătoare</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form fade-in">
+        <h3>Trimite-ne un Mesaj</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nume</label>
+            <input type="text" id="f-name" placeholder="Numele tău">
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="f-email" placeholder="email@tau.ro">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Subiect</label>
+          <select id="f-subject">
+            <option value="">Selectează subiectul...</option>
+            <option>Întrebare despre un produs</option>
+            <option>Asistență comandă</option>
+            <option>Colaborare / parteneriat</option>
+            <option>Propunere conținut</option>
+            <option>Altceva</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Mesaj</label>
+          <textarea id="f-msg" placeholder="Descrie în câteva rânduri cum te putem ajuta..."></textarea>
+        </div>
+        <button class="btn-submit" id="contactBtn">Trimite Mesajul →</button>
+        <p style="font-size:12px; color:var(--dgray); margin-top:14px; text-align:center">
+          🔒 Datele tale sunt în siguranță. Nu trimitem spam.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><div class="logo-badge">AI</div><div class="logo-text"><span class="logo-line1">INGINERUL</span><span class="logo-line2">CU AI</span></div></a>
+        <p>Colecția #1 de prompturi AI premium în română. Aplici imediat, rezultate garantate.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/inginerulai/" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+          <a href="https://www.tiktok.com/@inginerulai" target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
+          <a href="https://www.youtube.com/@InginerulCuAi" target="_blank" rel="noopener" aria-label="YouTube">▶️</a>
+          <a href="https://www.facebook.com/profile.php?id=61587983686007" target="_blank" rel="noopener" aria-label="Facebook">👤</a>
+        </div>
+      </div>
+      <div class="footer-col"><h5>Produse</h5><a href="shop.html">Toate Volumele</a><a href="shop.html#bundles">Bundle-uri</a><a href="shop.html#collection">8 Volume Colecția Completă</a></div>
+      <div class="footer-col"><h5>Informații</h5><a href="despre.html">Despre Noi</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div>
+      <div class="footer-col"><h5>Legal</h5><a href="termeni.html">Termeni &amp; Condiții</a><a href="confidentialitate.html">Politică Confidențialitate</a><a href="retur.html">Politică Retur</a></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Inginerul Cu AI. Toate drepturile rezervate.</span>
+      <span>Făcut cu ⚙️ în România</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+document.getElementById('contactBtn').addEventListener('click', function(e) {
+  e.preventDefault();
+  var name    = document.getElementById('f-name').value.trim();
+  var subject = document.getElementById('f-subject').value || 'Mesaj nou de pe site';
+  var msg     = document.getElementById('f-msg').value.trim();
+  var body    = (name ? 'Nume: ' + name + '\n\n' : '') + msg;
+  window.location.href = 'mailto:inginerulcuai@gmail.com'
+    + '?subject=' + encodeURIComponent(subject)
+    + '&body='    + encodeURIComponent(body);
+});
+</script>
+  <!-- MOBILE FLOATING CTA -->
+  <div class="mobile-floating-cta" id="mobileCta">
+    <div class="m-cta-content">
+      <a href="shop.html#collection" class="btn-primary m-cta-btn">Cumpără 8 Volume Colecția Completă</a>
+    </div>
+  </div>
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">↑</button>
+</body>
+</html>
