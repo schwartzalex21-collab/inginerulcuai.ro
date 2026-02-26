@@ -155,27 +155,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3600000); // 3600000 ms = 60 minutes
   }
 
-  // ── 48H LOOPING HERO TIMER ──────────────
+  // ── 12H HERO TIMER (NO LOOP) ────────────
   const heroTimer = document.querySelector('#heroTimer .time-bold');
   if (heroTimer) {
-    const loopTime = 48 * 60 * 60 * 1000;
+    const totalTime = 12 * 60 * 60 * 1000; // 12 hours in ms
 
-    let endTime = localStorage.getItem('heroTimerEnd');
-    if (!endTime || Date.now() > parseInt(endTime)) {
-      endTime = Date.now() + loopTime;
-      localStorage.setItem('heroTimerEnd', endTime);
+    let endTime = localStorage.getItem('heroTimerEnd12h');
+    if (!endTime) {
+      endTime = Date.now() + totalTime;
+      localStorage.setItem('heroTimerEnd12h', endTime);
     } else {
       endTime = parseInt(endTime);
     }
+
+    let intervalId; // To stop the timer once it hits 0
 
     function updateHeroTimer() {
       const now = Date.now();
       let diff = endTime - now;
 
       if (diff <= 0) {
-        endTime = now + loopTime;
-        localStorage.setItem('heroTimerEnd', endTime);
-        diff = loopTime;
+        diff = 0;
+        clearInterval(intervalId); // Stop updating when time is up
       }
 
       const hours = Math.floor(diff / (1000 * 60 * 60));
@@ -186,11 +187,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const fm = mins.toString().padStart(2, '0');
       const fs = secs.toString().padStart(2, '0');
 
-      heroTimer.innerHTML = `${fh} ore ${fm} min ${fs} sec`;
+      heroTimer.innerHTML = `${fh}h ${fm}m ${fs}s`;
     }
 
-    updateHeroTimer();
-    setInterval(updateHeroTimer, 1000);
+    updateHeroTimer(); // Initial call to avoid 1s delay
+    intervalId = setInterval(updateHeroTimer, 1000);
   }
 
   // ── MODAL / POPUP SYSTEM ──────────────
