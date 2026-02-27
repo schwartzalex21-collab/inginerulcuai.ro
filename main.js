@@ -4,6 +4,237 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // ══════════════════════════════════════
+  // LENIS SMOOTH SCROLLING
+  // ══════════════════════════════════════
+  let lenis;
+  if (typeof Lenis !== 'undefined') {
+    lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+      direction: 'vertical',
+      gestureDirection: 'vertical',
+      smooth: true,
+      mouseMultiplier: 1,
+      smoothTouch: false,
+      touchMultiplier: 2,
+      infinite: false,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+  }
+
+  // ══════════════════════════════════════
+  // GSAP SCROLLTRIGGER ANIMATIONS
+  // ══════════════════════════════════════
+  if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Sync Lenis with ScrollTrigger
+    if (lenis) {
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+      });
+      gsap.ticker.lagSmoothing(0);
+    }
+
+    // ── HERO PARALLAX DISPERSE EFFECT (Desktop Only) ──
+    let mm = gsap.matchMedia();
+    mm.add("(min-width: 992px)", () => {
+      const heroTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".hero",
+          start: "top top",
+          end: "bottom top",
+          scrub: 1
+        }
+      });
+
+      heroTl.to(".hero-center", {
+        scale: 0.85,
+        opacity: 0,
+        y: 100,
+        ease: "none"
+      }, 0);
+
+      heroTl.to(".hero-books-left", {
+        x: -150,
+        y: -200,
+        rotation: -15,
+        opacity: 0,
+        ease: "none"
+      }, 0);
+
+      heroTl.to(".hero-books-right", {
+        x: 150,
+        y: -200,
+        rotation: 15,
+        opacity: 0,
+        ease: "none"
+      }, 0);
+
+      return () => {
+        // Cleanup if needed
+      };
+    });
+
+
+    // ── PRODUCTS 3D STAGGER REVEAL (Unified for all screens) ──
+    const productCards = gsap.utils.toArray('.product-card:not(.card-featured)');
+
+    gsap.set(productCards, { autoAlpha: 0, y: 80, rotationX: -15, scale: 0.95, transformPerspective: 1000 });
+    ScrollTrigger.batch(productCards, {
+      start: "top 95%", // Trigger lower so it always catches on mobile
+      onEnter: batch => gsap.to(batch, { autoAlpha: 1, y: 0, rotationX: 0, scale: 1, stagger: 0.1, ease: "power3.out", duration: 1.2, overwrite: true }),
+      onLeaveBack: batch => gsap.to(batch, { autoAlpha: 0, y: 40, rotationX: -10, ease: "power2.in", overwrite: true })
+    });
+
+    // Handle featured cards separately for more impact
+    const featuredCards = gsap.utils.toArray('.card-featured');
+    featuredCards.forEach(card => {
+      gsap.fromTo(card,
+        { autoAlpha: 0, scale: 0.95, y: 50 },
+        {
+          autoAlpha: 1,
+          scale: 1,
+          y: 0,
+          duration: 1.5,
+          ease: "elastic.out(1, 0.75)",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    });
+
+    // ── 1. LINE MASK REVEAL (H2 TITLES) ──
+    const h2Titles = gsap.utils.toArray('h2');
+    h2Titles.forEach(h2 => {
+      const text = h2.innerHTML;
+      h2.innerHTML = `<span class="line-mask-wrapper"><span class="gsap-reveal-title" style="display:inline-block">${text}</span></span>`;
+      const innerText = h2.querySelector('.gsap-reveal-title');
+
+      gsap.fromTo(innerText,
+        { y: "120%", autoAlpha: 0, rotationX: -20 },
+        {
+          y: "0%",
+          autoAlpha: 1,
+          rotationX: 0,
+          duration: 1.2,
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: h2,
+            start: "top 95%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    });
+
+    // ── 2. STAGGERED FEATURES & TESTIMONIALS (Rezultate) ──
+    const resultCases = gsap.utils.toArray('.result-case');
+    resultCases.forEach((box) => {
+      gsap.fromTo(box,
+        { autoAlpha: 0, y: 60, rotationX: -10, scale: 0.96 },
+        {
+          autoAlpha: 1, y: 0, rotationX: 0, scale: 1,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: box,
+            start: "top 95%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    });
+
+    // ── 2.5 SITE-WIDE FADE-IN ELEMENTS ──
+    const fadeElements = gsap.utils.toArray('.fade-in');
+    fadeElements.forEach((el) => {
+      gsap.fromTo(el,
+        { autoAlpha: 0, y: 30 },
+        {
+          autoAlpha: 1, y: 0,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 95%",
+            toggleActions: "play none none reverse"
+          }
+        }
+      );
+    });
+
+    // ── 3. BACKGROUND GLOW PARALLAX ──
+    const glows = gsap.utils.toArray('.glow');
+    glows.forEach(glow => {
+      gsap.to(glow, {
+        y: "20vh", // Subtle slow move down on scroll
+        ease: "none",
+        scrollTrigger: {
+          trigger: glow.parentElement,
+          start: "top top",
+          end: "bottom top",
+          scrub: true
+        }
+      });
+    });
+
+    // ── 4. MAGNETIC HOVER BUTTONS ──
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+      const magneticBtns = document.querySelectorAll('.btn-primary, .btn-nav, .btn-product');
+      magneticBtns.forEach(btn => {
+        btn.classList.add('magnetic-btn');
+
+        const xSetter = gsap.quickSetter(btn, "x", "px");
+        const ySetter = gsap.quickSetter(btn, "y", "px");
+
+        btn.addEventListener('mousemove', (e) => {
+          const rect = btn.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const centerY = rect.top + rect.height / 2;
+          const distX = e.clientX - centerX;
+          const distY = e.clientY - centerY;
+
+          xSetter(distX * 0.25);
+          ySetter(distY * 0.25);
+        });
+
+        btn.addEventListener('mouseleave', () => {
+          gsap.to(btn, {
+            x: 0,
+            y: 0,
+            duration: 0.7,
+            ease: "elastic.out(1, 0.3)"
+          });
+        });
+      });
+    }
+
+    // ── 5. FLOATING ANIMATION FOR MODAL IMAGES ──
+    const modalImages = gsap.utils.toArray('.modal-image');
+    modalImages.forEach(img => {
+      gsap.to(img, {
+        y: -15,
+        rotation: 1,
+        duration: 2.5,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1
+      });
+    });
+
+  }
+
   // ── NAVBAR SCROLL ─────────────────────
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
@@ -36,22 +267,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ── SCROLL ANIMATIONS ─────────────────
-  const fadeEls = document.querySelectorAll('.fade-in');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => {
-          entry.target.classList.add('visible');
-        }, i * 80);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-  fadeEls.forEach(el => observer.observe(el));
-
   // ── SMOOTH ANCHOR SCROLL ───────────────
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
@@ -66,12 +281,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── PRODUCT CARD HOVER GLOW ───────────
   document.querySelectorAll('.product-card, .bundle-card, .testimonial').forEach(card => {
+    const xSetter = gsap.quickSetter(card, "--mouse-x", "%");
+    const ySetter = gsap.quickSetter(card, "--mouse-y", "%");
+
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / rect.width) * 100;
       const y = ((e.clientY - rect.top) / rect.height) * 100;
-      card.style.setProperty('--mouse-x', x + '%');
-      card.style.setProperty('--mouse-y', y + '%');
+      xSetter(x);
+      ySetter(y);
     });
   });
 
@@ -175,8 +393,10 @@ document.addEventListener('DOMContentLoaded', () => {
       let diff = endTime - now;
 
       if (diff <= 0) {
-        diff = 0;
-        clearInterval(intervalId); // Stop updating when time is up
+        // Evergreen timer: automatically reset to 12h when expired
+        endTime = Date.now() + totalTime;
+        localStorage.setItem('heroTimerEnd12h', endTime);
+        diff = totalTime;
       }
 
       const hours = Math.floor(diff / (1000 * 60 * 60));
@@ -187,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const fm = mins.toString().padStart(2, '0');
       const fs = secs.toString().padStart(2, '0');
 
-      heroTimer.innerHTML = `${fh}h ${fm}m ${fs}s`;
+      heroTimer.textContent = `${fh}h ${fm}m ${fs}s`;
     }
 
     updateHeroTimer(); // Initial call to avoid 1s delay
@@ -265,5 +485,46 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // ── LEGACY FADE-IN OBSERVER (For remaining pages like despre, blog) ──
+  const fadeEls = document.querySelectorAll('.fade-in');
+  if (fadeEls.length > 0) {
+    const fadeObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, i * 80);
+          fadeObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    fadeEls.forEach(el => fadeObserver.observe(el));
+  }
+
+  // ── 3D TILT EFFECT (BENTO BOX) ────────
+  const tiltCards = document.querySelectorAll('.product-card, .card-featured');
+  tiltCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left; // x position within the element.
+      const y = e.clientY - rect.top; // y position within the element.
+
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+
+      const tiltX = ((y - centerY) / centerY) * -5; // Max rotation 5deg
+      const tiltY = ((x - centerX) / centerX) * 5; // Max rotation 5deg
+
+      card.style.setProperty('--rx', `${tiltX}deg`);
+      card.style.setProperty('--ry', `${tiltY}deg`);
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.setProperty('--rx', `0deg`);
+      card.style.setProperty('--ry', `0deg`);
+    });
+  });
 
 });
