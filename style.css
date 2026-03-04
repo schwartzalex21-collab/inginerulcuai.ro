@@ -1477,6 +1477,12 @@ footer {
   flex-shrink: 0;
 }
 
+.bundle-includes li.disabled-item::before {
+  content: '✖';
+  color: #e74c3c;
+}
+
+
 .bundle-includes li:last-child {
   border-bottom: none;
 }
@@ -2190,6 +2196,11 @@ footer {
   content: '✓';
   color: var(--emerald);
   font-weight: 700;
+}
+
+.modal-includes li.disabled-item::before {
+  content: '✖';
+  color: #e74c3c;
 }
 
 .modal-price-box {
@@ -2943,5 +2954,306 @@ nav {
   /* Center the savings badges on mobile */
   .savings-badge {
     align-self: center !important;
+  }
+}
+
+/* ══════════════════════════════════════
+   AWWWARDS FEATURES
+══════════════════════════════════════ */
+/* 1. Cinematic Film Grain (Maximum Performance PNG) */
+.film-grain {
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  width: 300vw;
+  /* Oversized for animation */
+  height: 300vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.12;
+  /* Adjust opacity for PNG aesthetic */
+  /* Real pre-rendered noise for 0 GPU strain */
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAAAAADb/M11AAAJyklEQVR4nO2byZblOAzDo/n/j/Z1n2zGvCpB0aQ4a3WWX1uWpSiy1Pz9P9V6H3s8n0/H13P249X9p8kvrH1/g/qf1/7r2f05H1/r+50Pfp3zP785Pz5/P/76Xv/n+vz49fHx5fPr59fj19d45eZc7/7oN/HkQ/Tns+HlG3/Z8983x3f//uG8v+bXp/Z+nOf+f/7P+fy2fR5vR7/W+p/H39+fn1/7d3//49/fX+fj9+eXz6+fX4+v4/t2/A7O769f44Xz3/fL269u1v23H8zXw/lMvPv89832/T//eM4/94/Zf9m8h//1l/R+P/6a3r8ff3+/Hl/H+/t5H8/n3/P18/H74+fH3//I+81lG7f71/+H458f388X9/o/6fl26A/5d+fnn/9Xf/x3vr9fn4/218fHl8+vn1+PW/n42n+99/3356N9H4//x3n7Q8150t7zX7L+/o3X3zefv1/j+Z+x/M38/P385z/n/T1fH04u/23e8/k1H1//+vr59fj+P6d7vfef56v/x2t+H1+ff3j9/R/O9+/PX2/f4+/p/fPr+5/zz1+v8w/6fn389fn18+tx7f/g7+/n578//uH5+3k5z+PzfL71v17G9zdn2b7v//z3eR/H8/W9/+P5ePZf4+Xv55/3++dz9vfX19fr98+/X3//ef//Pf31/n7+ebz6+f+n1+P7+v52P7Tz+/Px3/b+/X8+/u+/w/fv3+fn1+/xvd//v3+OfvPnOfrb+fzf/7z+ef+/efX19/nn8/b82v89+Mff72e/zF+fz7+3+O/H39Pvz8fn9/fjX8/X+/fr79fH0//9/H/Hp/fr8fX9X7++rjfv/+/fv18/fzP/3t8fH3957m+z8ff2/v96/zz56+Pf6bn1+/x33++/j4//r+9H/2///X9evyfP2+/f96Pb+//78fn9+vx/Z/3n8fn2n++/vjM+M/H/3n+e32//P9/3h9fny/u9+PPyvv1//3x+fn1119fv+bn6/3/t3//n/9//X1/f70+vv/z/fj8fj2+js//56+372///fvH1/frZzP0f/H5+fn9659/f/33P//D89eff3/959/Pv/P3Xz9/Pz6/X4+vw//n92+vX2+/X1++3t7n7+fj899v7+f4//P1/Ovt6/fXz//g4/Pfnv/H98/frx9//f18/fj8+vkf3m/+6/n2119/Pq/nj9/ff87//z1//fXj//i//X9+vfr/fnx+f16fP9/f7Xj1evv6/Hff3/9fH0//H+/fj2//n29f/18ff/fXz/fn6fP1++/n8fn1enwdf/38+vP1/t8fv76+Xv/f/97n+/Hr78fn4+vr3//H79fHr8ff3///69fbr///n/fj//vj8/v1+Dr+v///9/Px9//v7+/Xn8/73/n8enw9Pv/+/frz9e/79e/j59fv8eXz6+fX4//38/Xr9fH569fnx79/v//jP//+efv17/vj5//y+fXz6/H//Pn7/evz++vx9ef3q8/Hx/H///v48vn18/vx//v9+f3j+eP7/efx+evfr6/Hr5//x+fXz6/H//P3/fH39fjj68+/j1+/v3789fn18/vx//zz8fXx+et/n48vX//fjy+fXz+/Hv8fnx9fH59ff//6/Hz++Pry+fXz6/H/+/f9+vn8/vn69/349/fXl8+vn1+P/9fn35/f/z5+fv19/fnq8+vn1+P/9fP9+vPj5//p89ffl8+vn1+P/93vX7+e/8fn91evX39fPr9+fj3+H5/Pr69ffx4/v19/v35ffH79/Hr8P39+j/fj52+PD3//4+PL59fPr8f/6/Pr6/378/n18ef779fPl8+vn1+Pz/fXx9//X48vv14+vz6+Pj5//f18efHl8+vn1+Pz8/Prj7///Pfx4+v3j+Pz1xe/fX59fPn8+vn1+Hy/n4/Pv//6/fj6/O+//fV1vv98fHnx5fPr59fj6/H15+OvX5+/H3+++vyPf33959fv/ePl8+vn1+Pr8Xl///Pr42+/v4+/fv7T+//r8/Py4svn18/vx9fjH/rxx58//3/++vvxx99//uvL59fPr8fX8T++/1+Pr79//H5//H5//vHjxZfPr59fj6/jfx9/Pr/+/H/++vr91/fr4/PFl8+vn1+Pr/D18ffX738fP//j7//16z+eHw98+fz6+TVf+A/fH/8fv75f/5///fP49/LFl4/zW9XyM9f72b9+fD7+Pv7++/n54/nxl29/fH1/rve32kX33/mvr3+fn3/vvv/8x+f783c/XlzX0U9a37eF/sfx68fffx6/+Pz+9/Tzxct3f/yU6n1/fn+fn/+n+PPfz//4fP7X5Xm+52/J95+/Pl7/nveP9fP1519//P7t36/H/0iJ4+XfP67XX58fPz//8T9+/vyv+/G//uXx8/H1r/vfj68Pvxx//XjPj48Pv5x/n7++H5+/f7v+8fLzN6/Xn59fc7/+8fX1//l36+Pr33fPr1uPb5/v19efz///vHz+fPn6/H/T/fj779fHX1+//fP/019fv//j317/PX7///vXx//z38f7149fH/+/v5//t79fH/+P38//x+/vx//H79/n3/evvz3/frX+//35+ff/8fPP+++Pt6//fxx///P/4/vfvP75/v1//Hn/+r/fP75fP79evz+/X//fHz9/nz8fT8//j+/H6//H//fj+/X/+/nx9Pz8//r8fH8+fv9+ffx+fv/5/fj4e//34/vp+//z/r4//+/H3+/z//Hr+/fXz+/fr/9/H1//Px4/fv3/fn7//Pz8eX/8+//8//v38eX/6/fz9efz+fP3/+/H18ePz//Xz+/vz/fPx8f/8//j++PX79fn9//n5//z6/Xr//f/5/ff7+/v38/Pn/fP7/fvz//z6+vTz///vr48ft7+/H74/vz///P55//35/Pn1//j+/n/3//H78/fj+++f98/fny+/H1+P//fP3+/HznPfI+rHz+x/fn16+/7+/Pnzj+fPz7+/vx5//j++P75//7z/rX9u37+v3+Xbz/u14/r0/+vrP6fnq8fn65X3Xz/PX5/X/7efX62/P5/3P77+P3k//vx7/X4+Xn1/P59fz7fX4+Xb+/vPz5/Pnz9fHx//z+efz9eXHx8fX/8fHx8fXz5/fn36+vTz/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8B/k+uW42wR/WwAAAABJRU5ErkJggg==");
+  background-size: 150px 150px;
+  background-repeat: repeat;
+  animation: grain 1.5s steps(4) infinite;
+  transform: translateZ(0);
+  /* Hardware acceleration enabled */
+  will-change: transform;
+}
+
+@keyframes grain {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  25% {
+    transform: translate(-2%, -3%);
+  }
+
+  50% {
+    transform: translate(-5%, 2%);
+  }
+
+  75% {
+    transform: translate(3%, -5%);
+  }
+}
+
+
+
+/* 3. Custom Interactive Cursor (Desktop Only) */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10001;
+  /* High enough to be above preloader and modals */
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, mix-blend-mode 0.3s ease, border-color 0.3s ease;
+  will-change: width, height, transform;
+  display: none;
+}
+
+.custom-cursor.is-active {
+  background: rgba(243, 156, 18, 0.15);
+  width: 50px;
+  height: 50px;
+  /* border-color: transparent; */
+}
+
+/* Hide native cursor when custom is active */
+@media (hover: hover) and (pointer: fine) {
+  body.has-custom-cursor {
+    cursor: none;
+  }
+
+  body.has-custom-cursor a,
+  body.has-custom-cursor button,
+  body.has-custom-cursor .btn-primary,
+  body.has-custom-cursor .product-card,
+  body.has-custom-cursor .hbook {
+    cursor: none;
+  }
+}
+
+/* 4. Kinetic Typography Marquee */
+.marquee-section {
+  padding: 40px 0;
+  background: #e74c3c;
+  overflow: hidden;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transform: rotate(-2deg);
+  margin-top: 60px;
+  margin-bottom: 60px;
+  width: 105vw;
+  /* Slightly wider to cover edges when rotated */
+  left: -2.5vw;
+}
+
+.marquee-inner {
+  display: flex;
+  width: fit-content;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+.marquee-part {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-head);
+  font-size: 48px;
+  font-weight: 800;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding: 0 20px;
+}
+
+.marquee-part .star {
+  margin: 0 20px;
+  font-size: 32px;
+  animation: rotateStar 4s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+
+  /* Assuming 2 identical parts */
+}
+
+@keyframes rotateStar {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee-part {
+    font-size: 32px;
+  }
+
+  .marquee-part .star {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+
+  .marquee-section {
+    transform: rotate(-3deg);
+    padding: 30px 0;
+  }
+}
+
+/* 5. Horizontal Scroll Timeline */
+.horizontal-scroll-section {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  position: relative;
+}
+
+.h-scroll-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.h-scroll-wrapper {
+  display: flex;
+  height: 100%;
+  width: max-content;
+  /* Critical for horizontal scroll */
+}
+
+.h-panel {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0 5vw;
+}
+
+.h-panel-content {
+  max-width: 600px;
+  text-align: left;
+  background: var(--card-bg);
+  padding: 60px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-dim);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+
+.h-panel-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gold);
+}
+
+.h-step {
+  font-family: var(--font-head);
+  font-size: 80px;
+  font-weight: 900;
+  color: rgba(243, 156, 18, 0.1);
+  /* Ghost gold */
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  line-height: 1;
+}
+
+.h-panel-content h3 {
+  font-size: 32px;
+  font-family: var(--font-head);
+  margin-bottom: 20px;
+  color: var(--white);
+  position: relative;
+  z-index: 2;
+}
+
+.h-panel-content p {
+  font-size: 18px;
+  color: var(--gray);
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+/* Mobile Alternative for Horizontal Scroll (Native Snap) */
+@media (max-width: 900px) {
+  .horizontal-scroll-section {
+    height: auto;
+    /* Let it grow */
+    padding: 60px 0;
+  }
+
+  .h-scroll-container {
+    height: auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    padding-bottom: 30px;
+    /* Space for scrollbar if visible */
+  }
+
+  .h-scroll-wrapper {
+    width: auto;
+    /* Let panels define width */
+  }
+
+  .h-panel {
+    width: 85vw;
+    /* Show peeking next slide */
+    scroll-snap-align: center;
+    padding: 0 10px;
+  }
+
+  /* Reset GSAP changes if any are applied via style/class on mobile */
+  .h-scroll-wrapper[style] {
+    transform: none !important;
+  }
+
+  .h-panel-content {
+    padding: 40px 30px;
+  }
+
+  .h-panel-content h3 {
+    font-size: 24px;
+  }
+
+  .h-panel-content p {
+    font-size: 16px;
+  }
+
+  .h-step {
+    font-size: 60px;
   }
 }

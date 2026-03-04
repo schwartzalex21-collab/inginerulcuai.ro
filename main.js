@@ -3,11 +3,46 @@
 // ══════════════════════════════════════
 
 document.addEventListener('DOMContentLoaded', () => {
+  let lenis; // Define lenis at the top so it is accessible everywhere in the function without TDZ
+
+  // ══════════════════════════════════════
+  // AWWWARDS FEATURES (Cursor)
+  // ══════════════════════════════════════
+
+  // 2. Custom Interactive Cursor (Desktop Only)
+  if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    const cursor = document.querySelector('.custom-cursor');
+    if (cursor && typeof gsap !== 'undefined') {
+      document.body.classList.add('has-custom-cursor');
+      cursor.style.display = 'block'; // Ensure it becomes visible
+
+      // GSAP quick setter for performance
+      gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+      const xTo = gsap.quickTo(cursor, "x", { duration: 0.1, ease: "power3", force3D: true });
+      const yTo = gsap.quickTo(cursor, "y", { duration: 0.1, ease: "power3", force3D: true });
+
+      window.addEventListener("mousemove", e => {
+        xTo(e.clientX);
+        yTo(e.clientY);
+      });
+
+      // Interactive states
+      const interactives = document.querySelectorAll('a, button, .product-card, .hbook');
+      interactives.forEach(el => {
+        el.addEventListener("mouseenter", () => cursor.classList.add('is-active'));
+        el.addEventListener("mouseleave", () => cursor.classList.remove('is-active'));
+      });
+
+      // Also scale it down globally when clicking
+      window.addEventListener("mousedown", () => gsap.to(cursor, { scale: 0.8, duration: 0.1 }));
+      window.addEventListener("mouseup", () => gsap.to(cursor, { scale: 1, duration: 0.1 }));
+    }
+  }
+
 
   // ══════════════════════════════════════
   // LENIS SMOOTH SCROLLING
   // ══════════════════════════════════════
-  let lenis;
   if (typeof Lenis !== 'undefined') {
     lenis = new Lenis({
       duration: 1.2,
@@ -526,5 +561,59 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.setProperty('--ry', `0deg`);
     });
   });
+
+  // ── KINETIC TYPOGRAPHY MARQUEE ────────
+  // Only apply scroll-linked translation if screen is larger, on mobile just use CSS animation
+  if (window.innerWidth > 768) {
+    const marqueeInner = document.querySelector('.marquee-inner');
+    if (marqueeInner) {
+      // Pause CSS animation to let GSAP handle it based on scroll
+      marqueeInner.style.animation = 'none';
+
+      // Clone parts for seamless infinite scroll
+      const part = document.querySelector('.marquee-part');
+      for (let i = 0; i < 4; i++) {
+        marqueeInner.appendChild(part.cloneNode(true));
+      }
+
+      gsap.to(marqueeInner, {
+        xPercent: -15, // Reduced from -50 to make it move much slower on scroll
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".marquee-section",
+          start: "top bottom",
+          end: "bottom top",
+          scrub: 1.5 // Increased from 1 for a smoother, softer catch-up effect
+        }
+      });
+    }
+  }
+
+  // ── HORIZONTAL SCROLL TIMELINE ────────
+  const hScrollSection = document.querySelector('.horizontal-scroll-section');
+  const hScrollWrapper = document.getElementById('hScrollWrapper');
+
+  if (hScrollSection && hScrollWrapper && window.innerWidth > 900) {
+    // Calculate how far to scroll based on the wrapper's total width minus window width
+    let getScrollAmount = () => -(hScrollWrapper.scrollWidth - window.innerWidth);
+
+    // Create the horizontal scroll animation
+    const tween = gsap.to(hScrollWrapper, {
+      x: getScrollAmount,
+      ease: "none"
+    });
+
+    // Create the ScrollTrigger to pin the section and link scroll to the animation
+    ScrollTrigger.create({
+      trigger: hScrollSection,
+      start: "top top",
+      end: () => `+=${getScrollAmount() * -1}`, // The distance to scroll vertically
+      pin: true,
+      animation: tween,
+      scrub: 1, // Smooth scrubbing
+      invalidateOnRefresh: true, // Recalculate on resize
+      // markers: true // Un-comment for debugging
+    });
+  }
 
 });
