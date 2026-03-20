@@ -1,0 +1,2031 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistemul Copy-Paste AI — Fă Bani Din Prima Zi</title>
+  <meta name="description"
+    content="Colecția #1 de prompturi AI pentru antreprenori și hustlers. E-books premium cu zeci de sisteme gata de folosit pentru a genera venituri masive online.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── TESTIMONIALE CAROUSEL ── */
+    .testimonials-section {
+      padding: 100px 0;
+      overflow: hidden;
+    }
+
+    .testimonials-track-wrap {
+      position: relative;
+    }
+
+    .testimonials-track-wrap::before,
+    .testimonials-track-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 120px;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .testimonials-track-wrap::before {
+      left: 0;
+      background: linear-gradient(90deg, var(--bg), transparent);
+    }
+
+    .testimonials-track-wrap::after {
+      right: 0;
+      background: linear-gradient(-90deg, var(--bg), transparent);
+    }
+
+    .testimonials-scroll {
+      display: flex;
+      gap: 20px;
+      width: max-content;
+      animation: scrollLeft 55s linear infinite;
+    }
+
+    .testimonials-scroll:hover {
+      animation-play-state: paused;
+    }
+
+    .testimonials-row2 {
+      animation-direction: reverse;
+      animation-duration: 65s;
+      margin-top: 20px;
+    }
+
+    @keyframes scrollLeft {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    .t-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-dim);
+      border-radius: 16px;
+      padding: 24px 28px;
+      width: 340px;
+      flex-shrink: 0;
+      transition: border-color 0.25s;
+    }
+
+    .t-card:hover {
+      border-color: rgba(243, 156, 18, 0.25);
+    }
+
+    .t-stars {
+      font-size: 15px;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .stars-5 {
+      color: var(--gold);
+    }
+
+    .stars-4 {
+      color: var(--gold);
+    }
+
+    .stars-3 {
+      color: #aaa;
+    }
+
+    .t-card p {
+      font-size: 14px;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 18px;
+      font-style: italic;
+    }
+
+    .t-author {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .t-avatar {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--midnight), var(--forest));
+      border: 2px solid rgba(243, 156, 18, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--gold);
+      flex-shrink: 0;
+      font-family: var(--font-head);
+    }
+
+    .t-author strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .t-author span {
+      font-size: 11px;
+      color: var(--dgray);
+    }
+
+    .t-avatar-img {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 2px solid rgba(243, 156, 18, 0.4);
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    /* ── PRODUSE GRID CENTRAT ── */
+    .products-grid-centered {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .last-row-centered {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .last-row-centered .product-card {
+      width: calc(25% - 15px);
+      max-width: 280px;
+    }
+
+    .featured-full {
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+
+<body>
+<div class="cursor-dot"><span class="cursor-text"></span></div>
+
+  <!-- 🎨 AWWWARDS FEATURES -->
+  <div class="film-grain"></div>
+
+  <div class="custom-cursor"></div>
+  <!-- 🎨 END AWWWARDS FEATURES -->
+  <div style="display:none" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg">
+      <symbol id="ico-timer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="13" r="8" />
+        <path d="M12 9v4l2.5 2.5" />
+        <path d="M9 3h6" />
+        <path d="M12 3v2" />
+      </symbol>
+      <symbol id="ico-infinity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 12c-2-2.5-4-4-6-4a4 4 0 0 0 0 8c2 0 4-1.5 6-4z" />
+        <path d="M12 12c2 2.5 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.5-6 4z" />
+      </symbol>
+      <symbol id="ico-gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3" />
+        <path
+          d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+      </symbol>
+      <symbol id="ico-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+      </symbol>
+      <symbol id="ico-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M12 20h9" />
+        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+      </symbol>
+      <symbol id="ico-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="13.5" cy="6.5" r="1" />
+        <circle cx="17.5" cy="10.5" r="1" />
+        <circle cx="8.5" cy="7.5" r="1" />
+        <circle cx="6.5" cy="12.5" r="1" />
+        <path
+          d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.476-1.125-.29-.289-.479-.68-.479-1.125a1.625 1.625 0 0 1 1.625-1.625h1.921c3.005 0 5.441-2.436 5.441-5.442C22 6.11 17.5 2 12 2z" />
+      </symbol>
+      <symbol id="ico-target" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <circle cx="12" cy="12" r="6" />
+        <circle cx="12" cy="12" r="2" />
+      </symbol>
+      <symbol id="ico-music" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M9 18V5l12-2v13" />
+        <circle cx="6" cy="18" r="3" />
+        <circle cx="18" cy="16" r="3" />
+      </symbol>
+      <symbol id="ico-crown" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M2 17l2-9 5 5 3-8 3 8 5-5 2 9z" />
+        <rect x="2" y="17" width="20" height="2" rx="1" />
+      </symbol>
+      <symbol id="ico-user" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+        <circle cx="12" cy="7" r="4" />
+      </symbol>
+      <symbol id="ico-diamond" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="12 2 22 9 18 21 6 21 2 9" />
+        <line x1="2" y1="9" x2="22" y2="9" />
+      </symbol>
+      <symbol id="ico-muscle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path
+          d="M18 15.5c0 1.5-1.5 4.5-4 4.5s-4-2-4-4c0-1 .5-2 1-2.5l2-2c.5-.5 1-1.5 1-2.5 0-1.7-1.3-3-3-3S8 7.3 8 9" />
+      </symbol>
+      <symbol id="ico-laptop" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="3" width="20" height="14" rx="2" />
+        <line x1="2" y1="20" x2="22" y2="20" />
+      </symbol>
+      <symbol id="ico-books" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+        <line x1="12" y1="6" x2="16" y2="6" />
+        <line x1="12" y1="10" x2="16" y2="10" />
+      </symbol>
+      <symbol id="ico-megaphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 11l18-5v12L3 13v-2z" />
+        <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
+      </symbol>
+      <symbol id="ico-camera" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+        <circle cx="12" cy="13" r="4" />
+      </symbol>
+      <symbol id="ico-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+        <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+      </symbol>
+      <symbol id="ico-fire" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2c0 0-5 5-5 11a5 5 0 0 0 10 0c0-6-5-11-5-11z" />
+        <path d="M12 12c0 0-2 2-2 4a2 2 0 0 0 4 0c0-2-2-4-2-4z" />
+      </symbol>
+      <symbol id="ico-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+        <path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+      </symbol>
+      <symbol id="ico-robot" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="10" rx="2" />
+        <circle cx="12" cy="5" r="2" />
+        <line x1="12" y1="7" x2="12" y2="11" />
+        <circle cx="8" cy="16" r="1" fill="currentColor" />
+        <circle cx="16" cy="16" r="1" fill="currentColor" />
+        <path d="M8 19h8" />
+        <line x1="3" y1="14" x2="1" y2="14" />
+        <line x1="21" y1="14" x2="23" y2="14" />
+      </symbol>
+      <symbol id="ico-brain" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 5a3 3 0 0 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z" />
+        <path d="M12 5a3 3 0 0 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z" />
+        <path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4" />
+      </symbol>
+      <symbol id="ico-play" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10" />
+        <polygon points="10 8 16 12 10 16 10 8" />
+      </symbol>
+      <symbol id="ico-star" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+        <polygon
+          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </symbol>
+      <symbol id="ico-star-empty" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polygon
+          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+      </symbol>
+    </svg></div>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-badge">AI</div>
+        <div class="logo-text">
+          <span class="logo-line1">INGINERUL</span>
+          <span class="logo-line2">CU AI</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Sisteme</a></li>
+        <li><a href="shop.html">Pachete</a></li>
+        <li><a href="despre.html">Povestea</a></li>
+        <li><a href="rezultate.html">Rezultate</a></li>
+        <li><a href="blog.html">Cazuri Reale</a></li>
+        <li><a href="contact.html">Suport</a></li>
+        <li></li>
+      </ul>
+      <a href="shop.html" class="btn-nav">Începe să faci Bani →</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu"><a href="index.html">Sisteme</a><a href="shop.html">Pachete</a><a href="despre.html">Povestea</a><a href="rezultate.html">Rezultate</a><a href="blog.html">Cazuri Reale</a><a href="contact.html">Suport</a><a href="shop.html" class="btn-mobile">Vezi Produsele →</a></div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- Particles WebGL Container -->
+    <div id="tsparticles" style="position: absolute; top:0; left:0; width:100%; height:100%; z-index:0; pointer-events: none;"></div>
+    
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+    </div>
+
+    <!-- Cărți stânga -->
+    <div class="hero-books-left">
+      <div class="hbook hb-l1" data-modal-target="modal-vol1" style="pointer-events:auto;cursor:pointer">
+        <div class="hbook-spine hbook-spine-green"></div>
+        <div class="hbook-label">MARKETING</div>
+      </div>
+      <div class="hbook hb-l2" data-modal-target="modal-vol5" style="pointer-events:auto;cursor:pointer">
+        <div class="hbook-spine"></div>
+        <div class="hbook-label">BUSINESS</div>
+      </div>
+      <div class="hbook hb-l3" data-modal-target="modal-vol2" style="pointer-events:auto;cursor:pointer">
+        <div class="hbook-spine hbook-spine-dim"></div>
+        <div class="hbook-label">COPYWRITING</div>
+      </div>
+      <div class="hbook hb-l4" data-modal-target="modal-vol6" style="pointer-events:auto;cursor:pointer">
+        <div class="hbook-spine hbook-spine-green"></div>
+        <div class="hbook-label">SANATATE</div>
+      </div>
+    </div>
+
+    <!-- Conținut centrat -->
+    <div class="hero-center">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Sistemul #1 de Generat Bani cu AI în România
+      </div>
+      <h1 class="hero-title">
+        <span>Transformă AI-ul într-o</span>
+        <span class="gold">Mașinărie de Făcut Bani</span>
+      </h1>
+      <p class="hero-sub">
+        Arsenalul tău secret de strategii AI care generează profit în timp ce dormi. Totul 100% Copy-Paste. Fără scuze, doar încasări masive.
+      </p>
+      <div class="hero-cta" style="flex-direction: column; align-items: center; gap: 20px;">
+        <a href="shop.html" class="btn-primary btn-hero">Vreau Să Fac Bani Acum →</a>
+
+        <a href="shop.html#collection" class="hero-offer-bar">
+          <div class="hob-price-old">Valoare reală — <span class="nowrap"><s>777 RON</s></span></div>
+          <div class="hob-timer" id="heroTimer">Expiră în:<br><span class="time-bold">48h 00m 00s</span></div>
+          <div class="hob-price-new">Preț nou — <span class="nowrap">199 RON</span></div>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num"><span class="mono-cyber">160</span></span>
+          <span class="stat-label">Prompturi Premium</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat">
+          <span class="stat-num"><span class="mono-cyber">8</span></span>
+          <span class="stat-label">Surse de Venit</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat">
+          <span class="stat-num"><span class="mono-cyber">X 1000</span></span>
+          <span class="stat-label">ROI Estimativ</span>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat">
+          <span class="stat-num" id="dynamic-counter"><span class="mono-cyber">1254</span></span>
+          <span class="stat-label">Hustlers Activi</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cărți dreapta -->
+    <div class="hero-books-right">
+      <div class="hbook hb-r1" data-modal-target="modal-vol3" style="pointer-events:auto;cursor:pointer">
+        <div class="hbook-spine hbook-spine-green"></div>
+        <div class="hbook-label">DESIGN</div>
+      </div>
+      <div class="hbook hb-r2" data-modal-target="modal-vol4" style="pointer-events:auto;cursor:pointer">
+        <div class="hbook-spine hbook-spine-dim"></div>
+        <div class="hbook-label">PRODUCTIVITATE</div>
+      </div>
+      <div class="hbook hb-r3" data-modal-target="modal-vol7" style="pointer-events:auto;cursor:pointer">
+        <div class="hbook-spine"></div>
+        <div class="hbook-label">DEZV PERSONALA</div>
+      </div>
+      <div class="hbook hb-r4" data-modal-target="modal-vol8" style="pointer-events:auto;cursor:pointer">
+        <div class="hbook-spine hbook-spine-dim"></div>
+        <div class="hbook-label">VIBE CODING</div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- 🎨 AWWWARDS: KINETIC TYPOGRAPHY MARQUEE -->
+  <section class="marquee-section">
+    <div class="marquee-inner">
+      <div class="marquee-part">
+        CUMPERI AZI, FACI BANI MÂINE <span class="star">✦</span> ROI IMEDIAT <span class="star">✦</span> COPY & PASTE SPRE LIBERTATE <span
+          class="star">✦</span> REDUCEREA DISPARE <span class="star">✦</span>
+      </div>
+      <div class="marquee-part">
+        CUMPERI AZI, FACI BANI MÂINE <span class="star">✦</span> ROI IMEDIAT <span class="star">✦</span> COPY & PASTE SPRE LIBERTATE <span
+          class="star">✦</span> REDUCEREA DISPARE <span class="star">✦</span>
+      </div>
+    </div>
+  </section>
+  <!-- 🎨 END AWWWARDS MARQUEE -->
+
+  
+  <!-- 💥 PROMPT BURST SECTION (WOW EFFECT) 💥 -->
+  <section class="prompt-burst-section" id="wow-effect">
+    <div class="burst-container">
+      
+      <!-- Central Package Indicator (The source of the explosion) -->
+      <div class="burst-center-pack" style="transform-style: preserve-3d; perspective: 1000px;">
+        <div class="pack-glow"></div>
+        <img src="assets/popup_full_collection.png" alt="Inginerul cu AI Pack" class="pack-img">
+        <div class="pack-label" style="text-shadow: 0 0 15px var(--neon-green)">DEBLOCHARE...</div>
+      </div>
+
+      <!-- Floating Prompt Snippets that will explode outward -->
+      <div class="floating-prompt p-top-left">
+        <div class="prompt-head"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="prompt-body mono-cyber">Acționează ca un copywriter de top. Scrie un VSL pentru...</div>
+      </div>
+
+      <div class="floating-prompt p-top-right">
+        <div class="prompt-head"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="prompt-body mono-cyber">Analizează acest tabel de date și extrage concluziile...</div>
+      </div>
+
+      <div class="floating-prompt p-bottom-left">
+         <div class="prompt-head"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="prompt-body mono-cyber">Generează 30 de zile de hook-uri virale pentru TikTok...</div>
+      </div>
+
+      <div class="floating-prompt p-bottom-right">
+         <div class="prompt-head"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="prompt-body mono-cyber">Creează un script Python care analizează automat...</div>
+      </div>
+
+      <div class="floating-prompt p-far-left">
+         <div class="prompt-head"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="prompt-body mono-cyber">Prompt de sistem: Ești un negociator impecabil...</div>
+      </div>
+
+      <div class="floating-prompt p-far-right">
+         <div class="prompt-head"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span></div>
+        <div class="prompt-body mono-cyber">Rescrie această secvență de mail-uri pentru vânzări maxime...</div>
+      </div>
+
+    </div>
+  </section>
+  <!-- END PROMPT BURST SECTION -->
+
+  <!-- PRODUSE -->
+  <section class="products-section" id="produse">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Colecția 2026</span>
+        <h2>Alege Volumul Tău</h2>
+        <p>Fiecare volum conține 20 de prompturi specializate, structurate profesional, gata de folosit în ChatGPT,
+          Claude sau orice alt tool AI.</p>
+      </div>
+
+      <!-- Toate cele 8 produse -->
+      <div class="products-grid-centered">
+        <div class="product-card ">
+      
+          <div class="product-tag-vol">Vol. 01</div>
+          <div class="product-icon"><img src="assets/popup_vol1_marketing.png" class="animated-pack-overlay" alt="Vol. 01"></div>
+          <h3>Social Media<br>&amp; Viralitate Money</h3>
+          <p>Cum să crești conturi de la 0 și să vinzi produse de 100€ zilnic din trafic organic.</p>
+          <div class="product-price"><span class="price-old">69 RON</span><span class="price-new">49 RON</span></div>
+          <a href="#" data-modal-target="modal-vol1" class="btn-product">Cumpără →</a>
+        </div>
+        <div class="product-card ">
+      
+          <div class="product-tag-vol">Vol. 02</div>
+          <div class="product-icon"><img src="assets/popup_vol2_copywriting.png" class="animated-pack-overlay" alt="Vol. 02"></div>
+          <h3>Copywriting<br>&amp; Mesaje de Vânzare</h3>
+          <p>Scripturi exacte care au generat zeci de mii de euro. Copy-paste și trimite.</p>
+          <div class="product-price"><span class="price-old">69 RON</span><span class="price-new">49 RON</span></div>
+          <a href="#" data-modal-target="modal-vol2" class="btn-product">Cumpără →</a>
+        </div>
+        <div class="product-card ">
+      
+          <div class="product-tag-vol">Vol. 03</div>
+          <div class="product-icon"><img src="assets/popup_vol3_design.png" class="animated-pack-overlay" alt="Vol. 03"></div>
+          <h3>Design &amp;<br>Oferte Irezistibile</h3>
+          <p>Cum să ambalezi orice produs banal astfel încât oamenii să te implore să-l cumpere.</p>
+          <div class="product-price"><span class="price-old">69 RON</span><span class="price-new">49 RON</span></div>
+          <a href="#" data-modal-target="modal-vol3" class="btn-product">Cumpără →</a>
+        </div>
+        <div class="product-card ">
+      
+          <div class="product-tag-vol">Vol. 04</div>
+          <div class="product-icon"><img src="assets/popup_vol4_productivity.png" class="animated-pack-overlay" alt="Vol. 04"></div>
+          <h3>Sisteme de<br>Productivitate Pasivă</h3>
+          <p>Lucrează 2 ore pe zi. Automatizează restul. Secretul celor care fac 10k+/lună.</p>
+          <div class="product-price"><span class="price-old">69 RON</span><span class="price-new">49 RON</span></div>
+          <a href="#" data-modal-target="modal-vol4" class="btn-product">Cumpără →</a>
+        </div>
+        <div class="product-card ">
+      
+          <div class="product-tag-vol">Vol. 05</div>
+          <div class="product-icon"><img src="assets/popup_vol5_business.png" class="animated-pack-overlay" alt="Vol. 05"></div>
+          <h3>Cum Lansezi<br>Prima Afacere Profitabilă</h3>
+          <p>Planuri complete de business pe care le poți lansa azi cu 0 lei investiție.</p>
+          <div class="product-price"><span class="price-old">69 RON</span><span class="price-new">49 RON</span></div>
+          <a href="#" data-modal-target="modal-vol5" class="btn-product">Cumpără →</a>
+        </div>
+        <div class="product-card ">
+      
+          <div class="product-tag-vol">Vol. 06</div>
+          <div class="product-icon"><img src="assets/popup_vol6_health.png" class="animated-pack-overlay" alt="Vol. 06"></div>
+          <h3>Biohacking &amp;<br>Energie Inepuizabilă</h3>
+          <p>Nu poți face bani dacă ești mereu obosit. Protocoale exacte pentru energie de top.</p>
+          <div class="product-price"><span class="price-old">69 RON</span><span class="price-new">49 RON</span></div>
+          <a href="#" data-modal-target="modal-vol6" class="btn-product">Cumpără →</a>
+        </div>
+        <div class="product-card ">
+      
+          <div class="product-tag-vol">Vol. 07</div>
+          <div class="product-icon"><img src="assets/popup_vol7_personal_dev.png" class="animated-pack-overlay" alt="Vol. 07"></div>
+          <h3>Mindset de<br>Milionar Arogant</h3>
+          <p>Șterge limitările din mintea ta. Devino de neoprit. Atrage succesul.</p>
+          <div class="product-price"><span class="price-old">69 RON</span><span class="price-new">49 RON</span></div>
+          <a href="#" data-modal-target="modal-vol7" class="btn-product">Cumpără →</a>
+        </div>
+        <div class="product-card ">
+      
+          <div class="product-tag-vol">Vol. 08</div>
+          <div class="product-icon"><img src="assets/popup_vol8_vibe_coding.png" class="animated-pack-overlay" alt="Vol. 08"></div>
+          <h3>Vibe Coding<br>&amp; Software Pasiv</h3>
+          <p>Fă AI-ul să programeze tool-uri pe care le poți vinde cu abonament lunar (SaaS).</p>
+          <div class="product-price"><span class="price-old">69 RON</span><span class="price-new">49 RON</span></div>
+          <a href="#" data-modal-target="modal-vol8" class="btn-product">Cumpără →</a>
+        </div>
+
+        <!-- NEW PRODUCTS (COMING SOON) -->
+        <div class="product-card " style="opacity: 0.7; filter: grayscale(50%);">
+      
+          <div class="coming-soon-banner">COMING SOON</div>
+          <div class="product-tag-vol"
+            style="background: rgba(255,255,255,0.05); color: var(--gray); border-color: rgba(255,255,255,0.1);">Vol. 09
+          </div>
+          <div class="product-icon" style="color: var(--gray);"><svg class="site-icon" aria-hidden="true">
+              <use href="#ico-user" />
+            </svg></div>
+          <h3>HR &amp;<br>Recrutare</h3>
+          <p>Managementul resurselor umane, atragerea talentelor și retenția angajaților în echipa ta.</p>
+          <div class="product-price"><span class="price-new" style="color: var(--gray); font-size: 16px;">În
+              curând</span></div>
+          <a href="#" class="btn-product"
+            style="pointer-events: none; background: transparent; border-color: var(--border-dim); color: var(--gray);"
+            onclick="return false;">Indisponibil 🔒</a>
+        </div>
+
+        <div class="product-card " style="opacity: 0.7; filter: grayscale(50%);">
+      
+          <div class="coming-soon-banner">COMING SOON</div>
+          <div class="product-tag-vol"
+            style="background: rgba(255,255,255,0.05); color: var(--gray); border-color: rgba(255,255,255,0.1);">Vol. 10
+          </div>
+          <div class="product-icon" style="color: var(--gray);"><svg class="site-icon" aria-hidden="true">
+              <use href="#ico-diamond" />
+            </svg></div>
+          <h3>Finanțe &amp;<br>Contabilitate</h3>
+          <p>Gestiune financiară, optimizarea costurilor, bugetare și scalarea inteligentă a profitului.</p>
+          <div class="product-price"><span class="price-new" style="color: var(--gray); font-size: 16px;">În
+              curând</span></div>
+          <a href="#" class="btn-product"
+            style="pointer-events: none; background: transparent; border-color: var(--border-dim); color: var(--gray);"
+            onclick="return false;">Indisponibil 🔒</a>
+        </div>
+
+        <div class="product-card " style="opacity: 0.7; filter: grayscale(50%);">
+      
+          <div class="coming-soon-banner">COMING SOON</div>
+          <div class="product-tag-vol"
+            style="background: rgba(255,255,255,0.05); color: var(--gray); border-color: rgba(255,255,255,0.1);">Vol. 11
+          </div>
+          <div class="product-icon" style="color: var(--gray);"><svg class="site-icon" aria-hidden="true">
+              <use href="#ico-books" />
+            </svg></div>
+          <h3>Juridic &amp;<br>Compliance</h3>
+          <p>Asistență legală, contracte interne, conformitate și protejarea intereselor afacerii tale.</p>
+          <div class="product-price"><span class="price-new" style="color: var(--gray); font-size: 16px;">În
+              curând</span></div>
+          <a href="#" class="btn-product"
+            style="pointer-events: none; background: transparent; border-color: var(--border-dim); color: var(--gray);"
+            onclick="return false;">Indisponibil 🔒</a>
+        </div>
+
+        <div class="product-card " style="opacity: 0.7; filter: grayscale(50%);">
+      
+          <div class="coming-soon-banner">COMING SOON</div>
+          <div class="product-tag-vol"
+            style="background: rgba(255,255,255,0.05); color: var(--gray); border-color: rgba(255,255,255,0.1);">Vol. 12
+          </div>
+          <div class="product-icon" style="color: var(--gray);"><svg class="site-icon" aria-hidden="true">
+              <use href="#ico-target" />
+            </svg></div>
+          <h3>E-commerce<br>&amp; Retail</h3>
+          <p>Strategii de scalare pentru magazine online, conversii, fulfilment și experiența clientului.</p>
+          <div class="product-price"><span class="price-new" style="color: var(--gray); font-size: 16px;">În
+              curând</span></div>
+          <a href="#" class="btn-product"
+            style="pointer-events: none; background: transparent; border-color: var(--border-dim); color: var(--gray);"
+            onclick="return false;">Indisponibil 🔒</a>
+        </div>
+      </div>
+
+      <!-- FEATURED BUNDLE -->
+      <div style="margin-top:20px">
+        <div class="product-card card-featured ">
+      
+          <div class="featured-ribbon">BEST VALUE</div>
+          <div class="featured-content-wrapper">
+            <div class="featured-left">
+              <div class="product-tag-vol" style="background:var(--gold);color:#000;margin-bottom:12px">8</div>
+              <div class="product-icon"><svg class="site-icon" aria-hidden="true">
+                  <use href="#ico-crown" />
+                </svg></div>
+            </div>
+            <div class="featured-center">
+              <h3 style="font-size:24px; margin-bottom:8px">Arsenalul Complet — 8 Sisteme + 4 Bonusuri Generatoare de Cash
+              </h3>
+              <p>160 sisteme. Tot ce îți trebuie ca să-ți construiești un imperiu online cu mâinile în sân. Îți dau exact sistemele care deja fac mii de euro.</p>
+
+            </div>
+            <div class="featured-right">
+              <div class="product-price featured-price"><span class="price-old">777 RON</span><span
+                  class="price-new gold-price">199 RON</span></div>
+              <div class="savings-badge" style="margin:8px 0">Economisești 578 RON</div>
+              <a href="#" data-modal-target="modal-bundle3" class="btn-product btn-featured">Cumpără Colecția →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRO PACK BUNDLE -->
+      <div style="margin-top:24px">
+        <div class="product-card card-featured " style="border-color: rgba(155, 89, 182, 0.5);">
+      
+          <div class="featured-ribbon" style="background: #9b59b6; color: #fff;">POPULAR</div>
+          <div class="featured-content-wrapper">
+            <div class="featured-left">
+              <div class="product-tag-vol"
+                style="background:rgba(155, 89, 182, 0.2);color:#c39bd3;border:1px solid rgba(155, 89, 182, 0.4);margin-bottom:12px">
+                5</div>
+              <div class="product-icon"><svg class="site-icon" aria-hidden="true">
+                  <use href="#ico-fire" />
+                </svg></div>
+            </div>
+            <div class="featured-center">
+              <h3 style="font-size:24px; margin-bottom:8px">Hustler Pack — 5 Sisteme + 2 Bonusuri VIP</h3>
+              <p>Alegi 5 sisteme de care ai nevoie chiar acum. 100 de prompturi gata să vândă pentru tine. Set-up-ul perfect pentru a trece la nivelul următor.</p>
+
+            </div>
+            <div class="featured-right">
+              <div class="product-price featured-price"><span class="price-old">423 RON</span><span class="price-new"
+                  style="color:#c39bd3;">139 RON</span></div>
+              <div class="savings-badge"
+                style="margin:8px 0; background:rgba(46, 204, 113, 0.15); color:var(--emerald);">Economisești 284 RON
+              </div>
+              <a href="#" data-modal-target="modal-bundle2" class="btn-product"
+                style="background:#9b59b6; color:#fff; border-color:#9b59b6;">Cumpără Pro Pack &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- STARTER PACK BUNDLE -->
+      <div style="margin-top:24px">
+        <div class="product-card card-featured " style="border-color: rgba(41, 128, 185, 0.5);">
+      
+          <div class="featured-ribbon" style="background: #2980b9; color: #fff;">STARTER</div>
+          <div class="featured-content-wrapper">
+            <div class="featured-left">
+              <div class="product-tag-vol"
+                style="background:rgba(41, 128, 185, 0.2);color:#5dade2;border:1px solid rgba(41, 128, 185, 0.4);margin-bottom:12px">
+                3</div>
+              <div class="product-icon"><svg class="site-icon" aria-hidden="true">
+                  <use href="#ico-rocket" />
+                </svg></div>
+            </div>
+            <div class="featured-center">
+              <h3 style="font-size:24px; margin-bottom:8px">Beginner Hustle — 3 Sisteme la Alegere</h3>
+              <p>Alege 3 sisteme de bază. 60 prompturi esențiale. Calea cea mai rapidă să-ți recuperezi banii și să faci primul tău profit pe net până la finalul săptămânii.</p>
+
+            </div>
+            <div class="featured-right">
+              <div class="product-price featured-price"><span class="price-old">207 RON</span><span class="price-new"
+                  style="color:#5dade2;">79 RON</span></div>
+              <div class="savings-badge"
+                style="margin:8px 0; background:rgba(46, 204, 113, 0.15); color:var(--emerald);">Economisești 128 RON
+              </div>
+              <a href="#" data-modal-target="modal-bundle1" class="btn-product"
+                style="background:#2980b9; color:#fff; border-color:#2980b9;">Cumpără Starter Pack &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="products-note ">
+        <span><svg class="site-icon" aria-hidden="true">
+            <use href="#ico-lock" />
+          </svg> Plată securizată Stripe · Livrare instant pe email · Acces pe viață</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUM FUNCȚIONEAZĂ -->
+  <section class="how-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Simplu</span>
+        <h2>Cum Funcționează</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step ">
+          <div class="step-num">01</div>
+          <h4>Alegi volumul</h4>
+          <p>Individual sau pachet — alegi ce se potrivește nevoilor tale.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step ">
+          <div class="step-num">02</div>
+          <h4>Plătești securizat</h4>
+          <p>Card bancar prin Stripe. Procesare instant, fără abonament.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step ">
+          <div class="step-num">03</div>
+          <h4>Primești pe email</h4>
+          <p>PDF-ul ajunge în inbox în câteva secunde. Îl deschizi, îl folosești.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step ">
+          <div class="step-num">04</div>
+          <h4>Rezultate imediate</h4>
+          <p>Copy-paste promptul în ChatGPT sau Claude și primești output profesional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+        <!-- TESTIMONIALE — CAROUSEL INFINIT -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Ce Spun Clienții Noștri</span>
+        <h2>Bani Făcuți Pe Bune</h2>
+        <p>Avem peste 1200+ hustlers activi în ecosistem. Iată ce rezultate au obținut aplicând exact sistemele din interior.</p>
+      </div>
+    </div>
+
+    <div class="testimonials-track-wrap">
+      <div class="testimonials-scroll" id="row1">
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/radu-d.jpg" alt="Radu" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Radu</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Am aplicat strategia din Volumul 1 pe un cont nou de Instagram. Aseară am pus un reel făcut cu sistemele voastre, dimineața aveam 3 comenzi de 100€ fiecare.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Super tare Radu! 🔥 Fix despre asta e vorba, implementare rapida = rezultate. Keep crushing it!</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/maria-p.jpg" alt="Maria" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Maria</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Nu credeam că poți face bani doar din prompturi de AI. Am trimis un email scris cu Volumul 2 unei liste mici, a generat vânzări masive în doar câteva ore.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Wow 🚀 Email marketingul cu AI convertește nebunește când e făcut corect.</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/cosmin-t.jpg" alt="Cosmin" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Cosmin</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Folosesc Ultimate Pack de o lună. Am închis trei clienți internaționali pe design ($1500 fiecare), prin tool-urile recomandate aici.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Bro $4.5k într-o lună pur pasiv pe design e insane! 💸 Asta înseamnă să lucrezi smart, nu hard.</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/andrei-b.jpg" alt="Andrei" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Andrei</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Sunt începător în business dar cu Volumul 5 m-am lansat. Prezentarea de pitch mi-a adus rapid un client dispus să îmi plătească 500 Euro pe lună.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Primul client e mereu cel mai dulce, Andrei! E momentul sa scalezi.</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/laura-v.jpg" alt="Laura" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Laura</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Mi-am amortizat investiția în 2 zile. Cu scripturile din Volumul 2 am reușit să cresc conversia la site. Sute de euro profit extra zilnic.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Absolut bestial Laura! Volumul 2 e un cheat code pentru conversii 🤑</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/radu-d.jpg" alt="Radu" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Radu</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Am aplicat strategia din Volumul 1 pe un cont nou de Instagram. Aseară am pus un reel făcut cu sistemele voastre, dimineața aveam 3 comenzi de 100€ fiecare.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Super tare Radu! 🔥 Fix despre asta e vorba, implementare rapida = rezultate. Keep crushing it!</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/maria-p.jpg" alt="Maria" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Maria</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Nu credeam că poți face bani doar din prompturi de AI. Am trimis un email scris cu Volumul 2 unei liste mici, a generat vânzări masive în doar câteva ore.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Wow 🚀 Email marketingul cu AI convertește nebunește când e făcut corect.</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/cosmin-t.jpg" alt="Cosmin" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Cosmin</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Folosesc Ultimate Pack de o lună. Am închis trei clienți internaționali pe design ($1500 fiecare), prin tool-urile recomandate aici.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Bro $4.5k într-o lună pur pasiv pe design e insane! 💸 Asta înseamnă să lucrezi smart, nu hard.</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/andrei-b.jpg" alt="Andrei" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Andrei</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Sunt începător în business dar cu Volumul 5 m-am lansat. Prezentarea de pitch mi-a adus rapid un client dispus să îmi plătească 500 Euro pe lună.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Primul client e mereu cel mai dulce, Andrei! E momentul sa scalezi.</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/laura-v.jpg" alt="Laura" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Laura</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Mi-am amortizat investiția în 2 zile. Cu scripturile din Volumul 2 am reușit să cresc conversia la site. Sute de euro profit extra zilnic.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Absolut bestial Laura! Volumul 2 e un cheat code pentru conversii 🤑</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROW 2 - REVERSE -->
+    <div class="testimonials-track-wrap" style="margin-top: 40px;">
+      <div class="testimonials-scroll testimonials-row2" id="row2">
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/gabriel-h.jpg" alt="Gabi" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Gabi</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Luam 1500 lei salariu fix. Am creat o agenție mică, generez campanii FB Ads pt clienți. După 2 luni fac de 4 ori mai mult stând pe laptop.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Aia zic! De la salariu fix la agenție profitabilă în 60 de zile. Bravo Gabi! 💼</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/diana-s.jpg" alt="Diana" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Diana</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Am fost sceptic, dar volumul despre Vibe Coding m-a ajutat să generez un script Python pe care-l vând cu 20$ online. 40 vânzări lunar automat.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Passive income adevarat. Cel mai bun feeling sa faci bani in timp ce dormi.</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/florin-c.jpg" alt="Florin" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Florin</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Eu ofer consultanță fitness. Cu planurile alimentare generate curat în câteva secunde, pot lua de trei ori mai mulți clienți vizibil.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Timpul salvat cu AI-ul la planurile astea de nutritie se traduce in cash direct. Rupe-i Florin! 💪</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/alexandru-m.jpg" alt="Alex" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Alex</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Cel mai bun pachet pentru cine vrea cash pasiv. Folosesc sistemele să structurez canale de YouTube Faceless. Creștere spectaculoasă instant.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Faceless Channels sunt the goat la bani passivi acuma. Felicitari! 🔥</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/ioana-c.jpg" alt="Ioana" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Ioana</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Am aplicat strategiile de Business din Vol 5 și mi-am lansat un E-commerce. Profit 400 RON chiar din a treia zi de Ads.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>400 de lei a treia zi inseamna ca ai gasit the winning format. Baga scale-up!</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/gabriel-h.jpg" alt="Gabi" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Gabi</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Luam 1500 lei salariu fix. Am creat o agenție mică, generez campanii FB Ads pt clienți. După 2 luni fac de 4 ori mai mult stând pe laptop.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Aia zic! De la salariu fix la agenție profitabilă în 60 de zile. Bravo Gabi! 💼</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/diana-s.jpg" alt="Diana" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Diana</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Am fost sceptic, dar volumul despre Vibe Coding m-a ajutat să generez un script Python pe care-l vând cu 20$ online. 40 vânzări lunar automat.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Passive income adevarat. Cel mai bun feeling sa faci bani in timp ce dormi.</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/florin-c.jpg" alt="Florin" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Florin</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Eu ofer consultanță fitness. Cu planurile alimentare generate curat în câteva secunde, pot lua de trei ori mai mulți clienți vizibil.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Timpul salvat cu AI-ul la planurile astea de nutritie se traduce in cash direct. Rupe-i Florin! 💪</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/alexandru-m.jpg" alt="Alex" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Alex</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Cel mai bun pachet pentru cine vrea cash pasiv. Folosesc sistemele să structurez canale de YouTube Faceless. Creștere spectaculoasă instant.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>Faceless Channels sunt the goat la bani passivi acuma. Felicitari! 🔥</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+        <div class="wa-card">
+          <div class="wa-header">
+            <img src="assets/images/ioana-c.jpg" alt="Ioana" class="wa-avatar">
+            <div class="wa-contact">
+              <strong>Ioana</strong>
+              <span>Online</span>
+            </div>
+          </div>
+          <div class="wa-body">
+            <div class="wa-msg wa-received">
+              <p>Am aplicat strategiile de Business din Vol 5 și mi-am lansat un E-commerce. Profit 400 RON chiar din a treia zi de Ads.</p>
+              <span class="wa-time">14:24</span>
+            </div>
+            <div class="wa-msg wa-sent">
+              <p>400 de lei a treia zi inseamna ca ai gasit the winning format. Baga scale-up!</p>
+              <span class="wa-time">14:30 <svg viewBox="0 0 16 11" width="16" height="11"><path d="M11.8 1.6L6.5 7.4 4.1 4.7 2.8 5.8 6.5 9.9 13.1 2.7zM15.4 2.7L8.8 9.9 7.5 8.5 8.8 7.1 14.1 1.6z" fill="#53BCDA"></path></svg></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+
+  <!-- ══════════════════════════════════════
+     ÎNTREBĂRI FRECVENTE (FAQ)
+  ══════════════════════════════════════ -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header ">
+        <span class="section-tag">Întrebări Frecvente</span>
+        <h2>Ai nelămuriri?<br><span class="gold">Avem răspunsurile.</span></h2>
+        <p>Tot ce trebuie să știi înainte de a accesa colecția Inginerul Cu AI.</p>
+      </div>
+
+      <div class="faq-grid ">
+        <details class="faq-item">
+          <summary>Este un abonament lunar?</summary>
+          <div class="faq-answer">
+            Nu. Plata este una unică (one-time fee). Odată ce achiziționezi un volum sau un pachet, prompturile îți
+            rămân accesibile pe viață. Nu există costuri ascunse.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Primesc factură pe persoană juridică (firmă)?</summary>
+          <div class="faq-answer">
+            Sigur că da! La pagina de plată vei avea opțiunea de a introduce detaliile companiei tale. Factura se generează instant și o poți deduce.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Se potrivesc aceste sisteme chiar dacă sunt începător?</summary>
+          <div class="faq-answer">
+            Absolut. Am construit totul ca pe un sistem Copy-Paste. Nu trebuie să fii expert tehnic. Iei promptul, pui detaliile tale, obții scriptul de vânzare/produsul.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Funcționează pe varianta gratuită a Aplicațiilor AI?</summary>
+          <div class="faq-answer">
+            DA! Fiecare prompt din colecția noastră funcționează și pe variantele gratuite ale AI-ului.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Trebuie să știu engleză?</summary>
+          <div class="faq-answer">
+            Nu! Prompturile sunt create în așa fel încât să îți ofere ție, utilizatorului, cea mai bună experiență în
+            limba română. Atât de simplu.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box">
+        <div class="cta-glow"></div>
+        <div class="status-dot-wrap"><span class="status-dot"></span>Oportunitate Limitată</div>
+        <h2>Începe Să Faci Bani<br><span class="gold">cu Inginerul cu AI.</span></h2>
+        <p>Sincer? Oferta asta e ridicolă și nu o s-o țin activă mult timp. Prețul urcă la miezul nopții. Intră acum.</p>
+        <div class="cta-price">
+          <span class="cta-old"><span class="mono-cyber">Valoare totală: 777 RON</span></span>
+          <span class="cta-new">199 RON</span>
+          <span class="cta-save">Economisești 578 RON</span>
+        </div>
+        <a href="#" data-modal-target="modal-bundle3" class="btn-primary btn-large">Vreau Arsenalul Complet
+          →</a>
+        <p class="cta-note"><svg class="site-icon" aria-hidden="true">
+            <use href="#ico-lock" />
+          </svg> Plată securizată Stripe · Acces instant la bani · ROI garantat dacă aplici</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🎨 AWWWARDS: HORIZONTAL SCROLL TIMELINE -->
+  <section class="horizontal-scroll-section">
+    <div class="h-scroll-container">
+      <div class="h-scroll-wrapper" id="hScrollWrapper">
+        <div class="h-panel">
+          <div class="h-panel-content">
+            <span class="h-step">01</span>
+            <h3>Alegi Arsenalul</h3>
+            <p>Selectează volumul sau bundle-ul care produce banii pe care îi vrei acum.</p>
+          </div>
+        </div>
+        <div class="h-panel">
+          <div class="h-panel-content">
+            <span class="h-step">02</span>
+            <h3>Copy & Paste Sistemul</h3>
+            <p>Găsești arhitectura dorită și o copiezi în AI (ChatGPT/Claude).</p>
+          </div>
+        </div>
+        <div class="h-panel">
+          <div class="h-panel-content">
+            <span class="h-step">03</span>
+            <h3>Adaugi Detaliile Tale</h3>
+            <p>Înlocuiești variabilele cu nișa ta, prețurile tale și oferta ta.</p>
+          </div>
+        </div>
+        <div class="h-panel">
+          <div class="h-panel-content">
+            <span class="h-step">04</span>
+            <h3>Generezi Profit</h3>
+            <p>Lansezi campania, vinzi produsul, încasezi pasiv.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 🎨 END AWWWARDS HORIZONTAL SCROLL -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="logo-badge">AI</div>
+            <div class="logo-text"><span class="logo-line1">INGINERUL</span><span class="logo-line2">CU AI</span></div>
+          </a>
+          <p>Colecția #1 de prompturi AI premium în română. Aplici imediat, rezultate garantate.</p>
+          <div class="social-links">
+            <a href="https://www.instagram.com/inginerul_cu_ai/" target="_blank" rel="noopener" aria-label="Instagram"><svg
+                class="site-icon" aria-hidden="true">
+                <use href="#ico-camera" />
+              </svg></a>
+            <a href="https://www.tiktok.com/@sistemulai" target="_blank" rel="noopener" aria-label="TikTok"><svg
+                class="site-icon" aria-hidden="true">
+                <use href="#ico-music" />
+              </svg></a>
+            <a href="https://www.youtube.com/@InginerulCuAi" target="_blank" rel="noopener" aria-label="YouTube"><svg
+                class="site-icon" aria-hidden="true">
+                <use href="#ico-play" />
+              </svg></a>
+            <a href="https://www.facebook.com/profile.php?id=61587983686007" target="_blank" rel="noopener"
+              aria-label="Facebook"><svg class="site-icon" aria-hidden="true">
+                <use href="#ico-user" />
+              </svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Produse</h5>
+          <a href="shop.html">Toate Volumele</a>
+          <a href="shop.html#bundles">Bundle-uri</a>
+          <a href="shop.html#collection">Arsenalul Complet</a>
+        </div>
+        <div class="footer-col">
+          <h5>Informații</h5>
+          <a href="despre.html">Despre Noi</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5>Legal</h5>
+          <a href="termeni.html">Termeni &amp; Condiții</a>
+          <a href="confidentialitate.html">Politică Confidențialitate</a>
+          <a href="retur.html">Politică Retur</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Inginerul Cu AI. Toate drepturile rezervate.</span>
+        <span>Făcut cu <svg class="site-icon" aria-hidden="true">
+            <use href="#ico-gear" />
+          </svg>️ în România</span>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!-- ══════════════════════════════════════
+       PRODUCT MODALS
+  ══════════════════════════════════════ -->
+  <div class="modal-overlay" id="modal-vol1">
+    <div class="modal-content" data-lenis-prevent>
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/popup_vol1_marketing.png" alt="Marketing Digital & Social Media" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Copy & Paste ready</li>
+            <li>Testat pe ChatGPT & Claude</li>
+            <li>Generează strategii complete</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 01 — Social Media & Viralitate Money</span>
+          <h2 class="modal-title">Sistemul de Printat Bani pe Autopilot</h2>
+          <p class="modal-desc">Generare de vizualizări care se transformă direct în comenzi. Află cum să folosești algoritmii de pe TikTok și Reels ca pe un ATM personal. Prompturi care au generat zeci de mii de euro pentru clienții noștri. Fără experiență prealabilă.</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest sistem:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span
+              style="text-decoration:line-through; color:var(--dgray); font-size:13px; display:block; margin-bottom:4px; font-weight:500;">69
+              RON</span>
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+            <div class="trust-badges"
+              style="display:flex; justify-content:center; gap:12px; margin-top:12px; opacity:0.8;">
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--gold)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-lock" />
+                  </svg></span> Plată Securizată</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--emerald)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-bolt" />
+                  </svg></span> Livrare Instant</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:#3498db"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-infinity" />
+                  </svg>️</span> Acces pe Viață</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-vol2">
+    <div class="modal-content" data-lenis-prevent>
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/popup_vol2_copywriting.png" alt="Copywriting & Creare Continut" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Framework-uri (AIDA, PAS)</li>
+            <li>Adaptabil pentru orice nișă</li>
+            <li>Texte care convertesc</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 02 — Copywriting & Mesaje de Vânzare</span>
+          <h2 class="modal-title">Scripturi Care Hipnotizează și Vând</h2>
+          <p class="modal-desc">Oamenii cumpără emoție, tu le oferi justificarea logică cu AI-ul. Texte dovedite să convertească instantaneu. Preia un vizitator rece și transformă-l într-un client plătitor. Aceste prompturi sunt arsenalul liderilor de piață.</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest sistem:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span
+              style="text-decoration:line-through; color:var(--dgray); font-size:13px; display:block; margin-bottom:4px; font-weight:500;">69
+              RON</span>
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+            <div class="trust-badges"
+              style="display:flex; justify-content:center; gap:12px; margin-top:12px; opacity:0.8;">
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--gold)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-lock" />
+                  </svg></span> Plată Securizată</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--emerald)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-bolt" />
+                  </svg></span> Livrare Instant</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:#3498db"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-infinity" />
+                  </svg>️</span> Acces pe Viață</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-vol3">
+    <div class="modal-content" data-lenis-prevent>
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/popup_vol3_design.png" alt="Design & Creative" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Direcții vizuale clare</li>
+            <li>Prompturi Midjourney & DALL-E</li>
+            <li>Brief-uri structurate</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 03 — Design & Oferte Irezistibile</span>
+          <h2 class="modal-title">Oferte Refuzabile Doar de Nebuni</h2>
+          <p class="modal-desc">Cum să împachetezi vizual și conceptual o ofertă pe care oamenii să simtă că ratează o mare oportunitate dacă nu o cumpără ACUM. AI-ul generează oferte la care rata de conversie explodează. 10x ROI garantat.</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest sistem:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span
+              style="text-decoration:line-through; color:var(--dgray); font-size:13px; display:block; margin-bottom:4px; font-weight:500;">69
+              RON</span>
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+            <div class="trust-badges"
+              style="display:flex; justify-content:center; gap:12px; margin-top:12px; opacity:0.8;">
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--gold)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-lock" />
+                  </svg></span> Plată Securizată</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--emerald)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-bolt" />
+                  </svg></span> Livrare Instant</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:#3498db"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-infinity" />
+                  </svg>️</span> Acces pe Viață</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-vol4">
+    <div class="modal-content" data-lenis-prevent>
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/popup_vol4_productivity.png" alt="Productivity & Time Management" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Crește-ți eficiența cu 300%</li>
+            <li>Organizare impecabilă</li>
+            <li>Sisteme automate</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 04 — Sisteme de Productivitate Pasivă</span>
+          <h2 class="modal-title">Lucrează 2 Ore, Fă Bani de 10 Ore</h2>
+          <p class="modal-desc">Secretul bogaților este levierul (leverage). Cum să automatizezi absolut orice task plictisitor cu AI-ul și să te concentrezi 100% doar pe mișcările care aduc bani. Eficiență extremă, zero timp pierdut pe detalii inutile.</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest sistem:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span
+              style="text-decoration:line-through; color:var(--dgray); font-size:13px; display:block; margin-bottom:4px; font-weight:500;">69
+              RON</span>
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+            <div class="trust-badges"
+              style="display:flex; justify-content:center; gap:12px; margin-top:12px; opacity:0.8;">
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--gold)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-lock" />
+                  </svg></span> Plată Securizată</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--emerald)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-bolt" />
+                  </svg></span> Livrare Instant</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:#3498db"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-infinity" />
+                  </svg>️</span> Acces pe Viață</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-vol5">
+    <div class="modal-content" data-lenis-prevent>
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/popup_vol5_business.png" alt="Business & Entrepreneurship" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Planuri de afaceri solide</li>
+            <li>Analiză SWOT asistată</li>
+            <li>Găsirea Nișei Perfecte</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 05 — Cum Lansezi Prima Afacere Profitabilă</span>
+          <h2 class="modal-title">De la 0 la Primul Cash în 7 Zile</h2>
+          <p class="modal-desc">Nu ai nevoie de capital pentru a începe. AI-ul îți generează un business plan, îți deschide piața și îți creează go-to-market strategy. Lansezi prima afacere cu zero costuri și începi să încasezi din prima lună.</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest sistem:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span
+              style="text-decoration:line-through; color:var(--dgray); font-size:13px; display:block; margin-bottom:4px; font-weight:500;">69
+              RON</span>
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+            <div class="trust-badges"
+              style="display:flex; justify-content:center; gap:12px; margin-top:12px; opacity:0.8;">
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--gold)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-lock" />
+                  </svg></span> Plată Securizată</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--emerald)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-bolt" />
+                  </svg></span> Livrare Instant</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:#3498db"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-infinity" />
+                  </svg>️</span> Acces pe Viață</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-vol6">
+    <div class="modal-content" data-lenis-prevent>
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/popup_vol6_health.png" alt="Health & Wellness" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Rutine personalizate</li>
+            <li>Mese și rețete sănătoase</li>
+            <li>Optimizarea somnului</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 06 — Biohacking & Energie Inepuizabilă</span>
+          <h2 class="modal-title">Motorul Tău pentru a Face Bani</h2>
+          <p class="modal-desc">Cum vrei să concurezi dacă obosești la ora 14:00? Sistemul suprem de biohacking și productivitate prin AI. Obține planuri care îți optimizează dopamina, somnul și nivelul de energie ca să poți face hustle eficient.</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest sistem:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span
+              style="text-decoration:line-through; color:var(--dgray); font-size:13px; display:block; margin-bottom:4px; font-weight:500;">69
+              RON</span>
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+            <div class="trust-badges"
+              style="display:flex; justify-content:center; gap:12px; margin-top:12px; opacity:0.8;">
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--gold)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-lock" />
+                  </svg></span> Plată Securizată</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--emerald)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-bolt" />
+                  </svg></span> Livrare Instant</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:#3498db"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-infinity" />
+                  </svg>️</span> Acces pe Viață</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-vol7">
+    <div class="modal-content" data-lenis-prevent>
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/popup_vol7_personal_dev.png" alt="Personal Development" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Descoperirea punctelor forte</li>
+            <li>Îmbunătățirea comunicării</li>
+            <li>Shadow Work & Inteligență Emoțională</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 07 — Mindset de Milionar Arogant</span>
+          <h2 class="modal-title">Gândește Exact ca cei 1%</h2>
+          <p class="modal-desc">Banii nu vin la tine dacă nu ești pe frecvența lor. Antrenează-ți mintea cu AI-ul ca pe un partener de sparring pentru a rupe blocajele financiare. Cum să ceri de 5X mai mult pe serviciile tale fără rușine și obținând un "Da".</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest sistem:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span
+              style="text-decoration:line-through; color:var(--dgray); font-size:13px; display:block; margin-bottom:4px; font-weight:500;">69
+              RON</span>
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+            <div class="trust-badges"
+              style="display:flex; justify-content:center; gap:12px; margin-top:12px; opacity:0.8;">
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--gold)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-lock" />
+                  </svg></span> Plată Securizată</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--emerald)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-bolt" />
+                  </svg></span> Livrare Instant</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:#3498db"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-infinity" />
+                  </svg>️</span> Acces pe Viață</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-vol8">
+    <div class="modal-content" data-lenis-prevent>
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/popup_vol8_vibe_coding.png" alt="Vibe Coding" class="modal-image">
+          <ul class="modal-left-features">
+            <li>CodeGen & Refactoring Rapid</li>
+            <li>Arhitectură de Sistem AI</li>
+            <li>Bug squashing avansat</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag">Vol. 08 — Vibe Coding & Software Pasiv</span>
+          <h2 class="modal-title">Construiți Softuri Care Se Vând Singure</h2>
+          <p class="modal-desc">Nu scrii cod, scrii prompturi. Pune AI-ul să programeze aplicații web și SaaS-uri întregi din câteva descrieri textuale simple. Lansezi tool-uri digitale pe piață și percepi abonamente lunare cu Vibe Coding.</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții cu acest sistem:</h4>
+            <ul>
+              <li>20 Prompturi Premium</li>
+              <li>Format PDF Elegant</li>
+              <li>Instrucțiuni de Folosire</li>
+              <li>Reducere la Bundle-uri</li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span
+              style="text-decoration:line-through; color:var(--dgray); font-size:13px; display:block; margin-bottom:4px; font-weight:500;">69
+              RON</span>
+            <span class="modal-price-val">49 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Finalizează Comanda</a>
+            <div class="trust-badges"
+              style="display:flex; justify-content:center; gap:12px; margin-top:12px; opacity:0.8;">
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--gold)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-lock" />
+                  </svg></span> Plată Securizată</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--emerald)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-bolt" />
+                  </svg></span> Livrare Instant</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:#3498db"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-infinity" />
+                  </svg>️</span> Acces pe Viață</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- BUNDLE 1: STARTER PACK -->
+  <div class="modal-overlay" id="modal-bundle1">
+    <div class="modal-content"
+      style="border-color: rgba(46, 204, 113, 0.4); box-shadow: 0 20px 80px rgba(46, 204, 113, 0.15); border-width: 2px;"
+      data-lenis-prevent>
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/popup_starter_pack.png" alt="Starter Pack (3 Volume)" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Echilibrul perfect pret-valoare</li>
+            <li>Combină skill-urile de care ai nevoie</li>
+            <li>60 Prompturi premium totale</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag"
+            style="background: rgba(46,204,113,0.1); color: var(--emerald); border-color: rgba(46,204,113,0.3);">Pachet
+            Promoțional</span>
+          <h2 class="modal-title">Beginner Hustle (3 Sisteme)</h2>
+          <p class="modal-desc">Vrei să faci primii bani online dar ai buget limitat? Pachetul Beginner îți permite să selectezi exact 3 sisteme pentru a începe să încasezi rapid.</p>
+
+          <div class="modal-includes">
+            <h4>Ce este inclus:</h4>
+            <ul>
+              <li><strong>3 Volume</strong> (60 Prompturi)</li>
+              <li>Acces nelimitat imediat</li>
+              <li>Instrucțiuni complete per volum</li>
+              <li>Format PDF pe orice device</li>
+
+              <li class="disabled-item" style="opacity: 1;"><span style="opacity: 0.5;">Ghid ChatGPT &nbsp; 49
+                  RON</span></li>
+              <li class="disabled-item" style="opacity: 1;"><span style="opacity: 0.5;">Ghid Gemini &nbsp; 49 RON</span>
+              </li>
+              <li class="disabled-item" style="opacity: 1;"><span style="opacity: 0.5;">Ghid Claude &nbsp; 49 RON</span>
+              </li>
+              <li class="disabled-item" style="opacity: 1;"><span style="opacity: 0.5;">Extensii AI Browser &nbsp; 39
+                  RON</span></li>
+              <li class="disabled-item" style="opacity: 1;"><span style="opacity: 0.5;">Ghid unelte AI Business &nbsp;
+                  39 RON</span></li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span
+              style="text-decoration:line-through; color:var(--dgray); font-size:13px; display:block; margin-bottom:4px; font-weight:500;">207
+              RON</span>
+            <span class="modal-price-val">79 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn" style="background:#2ecc71; color:#fff;">Alege
+              Sistemele</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUNDLE 2: PRO PACK -->
+  <div class="modal-overlay" id="modal-bundle2">
+    <div class="modal-content"
+      style="border-color: #9b59b6; box-shadow: 0 20px 80px rgba(155, 89, 182, 0.15); border-width: 2px;"
+      data-lenis-prevent>
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/popup_pro_pack.png" alt="Pro Pack (5 Volume)" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Acoperi ariile majore de business</li>
+            <li>Combină skill-urile de care ai nevoie</li>
+            <li>100 Prompturi premium totale</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag"
+            style="background: rgba(155,89,182,0.1); color: #c39bd3; border-color: rgba(155,89,182,0.3);">Pachet
+            Avansat</span>
+          <h2 class="modal-title">Hustler Pack (5 Sisteme)</h2>
+          <p class="modal-desc">Pentru cei care deja fac bani și vor să scaleze. Alege 5 sisteme care te lasă să externalizezi munca la un AI și să te concentrezi doar pe cash flow.</p>
+
+          <div class="modal-includes">
+            <h4>Ce este inclus:</h4>
+            <ul>
+              <li><strong>5 Volume</strong> (100 Prompturi)</li>
+              <li>Acces nelimitat imediat</li>
+              <li>Instrucțiuni complete per volum</li>
+              <li>Format PDF pe orice device</li>
+
+              <li>Extensii AI Browser &nbsp; <span
+                  style="text-decoration: line-through; opacity: 0.7; font-size: 0.95em;">39 RON</span></li>
+              <li>Ghid unelte AI Business &nbsp; <span
+                  style="text-decoration: line-through; opacity: 0.7; font-size: 0.95em;">39 RON</span></li>
+              <li class="disabled-item" style="opacity: 1;"><span style="opacity: 0.5;">Ghid ChatGPT &nbsp; 49
+                  RON</span></li>
+              <li class="disabled-item" style="opacity: 1;"><span style="opacity: 0.5;">Ghid Gemini &nbsp; 49 RON</span>
+              </li>
+              <li class="disabled-item" style="opacity: 1;"><span style="opacity: 0.5;">Ghid Claude &nbsp; 49 RON</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span
+              style="text-decoration:line-through; color:var(--dgray); font-size:13px; display:block; margin-bottom:4px; font-weight:500;">423
+              RON</span>
+            <span class="modal-price-val">139 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn" style="background:#9b59b6; color:#fff;">Alege
+              Sistemele</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BUNDLE 3: FULL COLLECTION -->
+  <div class="modal-overlay" id="modal-bundle3">
+    <div class="modal-content"
+      style="border-color: var(--gold); box-shadow: 0 20px 100px rgba(243,156,18, 0.25); border-width: 2px; background: linear-gradient(145deg, var(--bg2), var(--card-bg));"
+      data-lenis-prevent>
+      <button class="modal-close">&times;</button>
+      <div class="modal-grid">
+        <div class="modal-left">
+          <img src="assets/popup_full_collection.png" alt="Ultimate Pack" class="modal-image">
+          <ul class="modal-left-features">
+            <li>Arsenalul COMPLET (160 Prompturi)</li>
+            <li>Cea mai bună investiție garantată</li>
+            <li>Actualizări suportate</li>
+          </ul>
+        </div>
+        <div class="modal-right">
+          <span class="modal-tag" style="background: rgba(243,156,18,0.2); border-color: var(--gold);">Ofertă de
+            Nerefusat</span>
+          <h2 class="modal-title">Arsenalul Complet</h2>
+          <p class="modal-desc">Singurul cheat code de care ai nevoie. Primești toate sistemele. Transformă-te într-o armată a unui singur om: marketing, vânzări, design și dezvoltare, toate automatizate. ROI exploziv.</p>
+
+          <div class="modal-includes">
+            <h4>Ce obții azi:</h4>
+            <ul>
+              <li><svg class="site-icon" aria-hidden="true">
+                  <use href="#ico-fire" />
+                </svg> MARKETING & SOCIAL MEDIA</li>
+              <li><svg class="site-icon" aria-hidden="true">
+                  <use href="#ico-fire" />
+                </svg> COPYWRITING</li>
+              <li><svg class="site-icon" aria-hidden="true">
+                  <use href="#ico-fire" />
+                </svg> DESIGN & CREATIVE</li>
+              <li><svg class="site-icon" aria-hidden="true">
+                  <use href="#ico-fire" />
+                </svg> PRODUCTIVITY</li>
+              <li><svg class="site-icon" aria-hidden="true">
+                  <use href="#ico-fire" />
+                </svg> BUSINESS</li>
+              <li><svg class="site-icon" aria-hidden="true">
+                  <use href="#ico-fire" />
+                </svg> HEALTH & WELLNESS</li>
+              <li><svg class="site-icon" aria-hidden="true">
+                  <use href="#ico-fire" />
+                </svg> PERSONAL DEVELOPMENT</li>
+              <li><svg class="site-icon" aria-hidden="true">
+                  <use href="#ico-fire" />
+                </svg> VIBE CODING</li>
+
+              <li>Ghid ChatGPT &nbsp; <span style="text-decoration: line-through; opacity: 0.7; font-size: 0.95em;">49
+                  RON</span></li>
+              <li>Ghid Gemini &nbsp; <span style="text-decoration: line-through; opacity: 0.7; font-size: 0.95em;">49
+                  RON</span></li>
+              <li>Ghid Claude &nbsp; <span style="text-decoration: line-through; opacity: 0.7; font-size: 0.95em;">49
+                  RON</span></li>
+              <li>Extensii AI Browser &nbsp; <span
+                  style="text-decoration: line-through; opacity: 0.7; font-size: 0.95em;">39 RON</span></li>
+              <li>Ghid unelte AI Business &nbsp; <span
+                  style="text-decoration: line-through; opacity: 0.7; font-size: 0.95em;">39 RON</span></li>
+            </ul>
+          </div>
+
+          <div class="modal-price-box">
+            <span
+              style="text-decoration:line-through; color:var(--dgray); font-size:13px; display:block; margin-bottom:4px; font-weight:500;">777
+              RON</span>
+            <span class="modal-price-val">199 RON</span>
+            <a href="https://example.com/checkout" class="modal-btn">Cumpără Tot Acum</a>
+            <div class="trust-badges"
+              style="display:flex; justify-content:center; gap:12px; margin-top:12px; opacity:0.8;">
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--gold)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-lock" />
+                  </svg></span> Plată Securizată</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:var(--emerald)"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-bolt" />
+                  </svg></span> Livrare Instant</div>
+              <div style="display:flex; align-items:center; gap:4px; font-size:11px; color:var(--gray);"><span
+                  style="color:#3498db"><svg class="site-icon" aria-hidden="true">
+                    <use href="#ico-infinity" />
+                  </svg>️</span> Acces pe Viață</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- MOBILE FLOATING CTA -->
+  <div class="mobile-floating-cta" id="mobileCta">
+    <div class="m-cta-content">
+      <a href="shop.html#collection" class="btn-primary m-cta-btn">Cumpără Arsenalul Complet</a>
+    </div>
+  </div>
+
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">↑</button>
+
+  <!-- GSAP & Lenis & Particles -->
+  <script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tsparticles/preset-links@3.0.3/tsparticles.preset.links.bundle.min.js"></script>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
