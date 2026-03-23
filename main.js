@@ -747,4 +747,72 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
+    // ── DYNAMIC BUNDLE SELECTION ──
+    const selectors = document.querySelectorAll('.dynamic-selector');
+    selectors.forEach(selector => {
+      const maxSelections = parseInt(selector.getAttribute('data-max'), 10) || 3;
+      const targetBtnId = selector.getAttribute('data-target-btn');
+      const targetBtn = document.getElementById(targetBtnId);
+      const countDisplay = selector.parentElement.querySelector('.selection-count');
+      const options = selector.querySelectorAll('.vol-toggle');
+      let selectedVols = [];
+
+      options.forEach(opt => {
+        opt.addEventListener('click', () => {
+          const val = opt.getAttribute('data-val');
+          
+          if (selectedVols.includes(val)) {
+            // Deselect
+            selectedVols = selectedVols.filter(it => it !== val);
+            opt.classList.remove('selected');
+          } else {
+            // Select (only if under max)
+            if (selectedVols.length < maxSelections) {
+              selectedVols.push(val);
+              opt.classList.add('selected');
+            } else {
+              // Shake animation feedback
+              gsap.fromTo(opt, {x: -3}, {x: 3, duration: 0.05, yoyo: true, repeat: 3});
+            }
+          }
+
+          // Update UI state
+          if (countDisplay) countDisplay.textContent = selectedVols.length;
+          
+          // Update button
+          if (targetBtn) {
+            const baseUrl = targetBtn.getAttribute('data-base-url');
+            const baseText = targetBtn.getAttribute('data-base-text') || 'Finalizează Comanda';
+            if (selectedVols.length === maxSelections) {
+              targetBtn.style.opacity = '1';
+              targetBtn.style.pointerEvents = 'auto';
+              targetBtn.textContent = baseText;
+              
+              // Build dynamic URL with Lemon Squeezy custom parameters
+              let customParams = '';
+              selectedVols.forEach((sv, idx) => {
+                customParams += `&checkout[custom][Volum_Ales_${idx+1}]=${encodeURIComponent(sv)}`;
+              });
+              
+              targetBtn.href = baseUrl + customParams;
+              targetBtn.classList.add('lemonsqueezy-button');
+              
+              // Re-initialize Lemon Squeezy to bind the newly added class
+              if (window.createLemonSqueezy) {
+                window.createLemonSqueezy();
+              }
+              
+              // Highlight activation
+              gsap.fromTo(targetBtn, {scale: 0.95}, {scale: 1, duration: 0.4, ease: "back.out(1.5)"});
+            } else {
+              targetBtn.style.opacity = '0.5';
+              targetBtn.style.pointerEvents = 'none';
+              targetBtn.textContent = `Alege ${maxSelections} volume`;
+              targetBtn.href = "#";
+            }
+          }
+        });
+      });
+    });
+
 });
